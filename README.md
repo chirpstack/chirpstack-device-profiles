@@ -7,18 +7,6 @@ which regions are supported, if the device supports Class-B or Class-C, etc...
 The aim is to build a complete list of LoRaWAN device-profiles that then can
 be imported by ChirpStack or potentially any other LNS.
 
-## Why not use the TTN lorawan-devices repository?
-
-Unfortuantely the [https://github.com/thethingsnetwork/lorawan-devices](https://github.com/thethingsnetwork/lorawan-devices)
-repository can no longer be used as a whole. The open-source license has been
-removed and users are not allowed to _extract and/or reuse the Device Repositoryas
-as a whole or a substantial part of its content_.
-This prevents ChirpStack users (and other LNS providers) from importing this
-repository into their database.
-
-The goal of this repository is to provide an open-source database of LoRaWAN
-device-profiles that can be freely imported.
-
 ## Adding a new device-profile
 
 ### Fork and clone
