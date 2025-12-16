@@ -1,9 +1,9 @@
 # Copy binary stage
-FROM --platform=$BUILDPLATFORM alpine:3.22.1 as binary
+FROM --platform=$BUILDPLATFORM alpine:3.22.1 AS binary
 
 ARG TARGETPLATFORM
 
-COPY target/x86_64-unknown-linux-musl/release/chirpstack-device-profiles-interface /usr/bin/chirpstack-device-profiles-interface-x86_64
+COPY interface/target/x86_64-unknown-linux-musl/release/chirpstack-device-profiles-interface /usr/bin/chirpstack-device-profiles-interface-x86_64
 
 RUN case "$TARGETPLATFORM" in \
 	"linux/amd64") \
