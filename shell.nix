@@ -8,5 +8,7 @@ pkgs.mkShell {
     pkgs.yarn
     pkgs.protoc-gen-grpc-web
   ];
+  shellHook = ''
+    export PATH=$PATH:~/.cargo/bin
+  '';
 }
-

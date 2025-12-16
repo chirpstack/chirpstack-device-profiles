@@ -1,6 +1,7 @@
 # hiddden files
 .*
 !.gitignore
+!.github
 
 # builds
 /interface/target
