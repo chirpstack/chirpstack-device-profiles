@@ -75,6 +75,7 @@ jobs:
           images: |
             chirpstack/${{ github.event.repository.name }}
           tags: |
+            type=raw,value=latest
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}
             type=semver,pattern={{major}}.{{minor}}
