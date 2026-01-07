@@ -20,6 +20,17 @@ be imported by ChirpStack or potentially any other LNS.
 * In the root of this repository, execute `make serve`.
 * Once `Starting server, bind: 0.0.0.0:8090` appears, open the web-interface in your browser by navigating to [http://localhost:8090](http://localhost:8090).
 
+### Example docker compose
+```
+services:
+  lorawan-device-profiles:
+    image: chirpstack/chirpstack-device-profiles:latest
+    ports:
+      - 8090:8090
+    volumes:
+      - ./:/lorawan-device-profiles
+```
+
 ### Add Vendor(s)
 
 * In the left menu, click the _Add vendor_ button.
