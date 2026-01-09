@@ -16,6 +16,8 @@ devices = [
     "sensecap-s2120.toml",
     "sensecap-t1000-a.toml",
     "sensecap-t1000-b.toml",
+    "sensecap-t1000-ab-mapper.toml",
+    "sensecap-t2000.toml",
 ]
 
 [vendor.metadata]
