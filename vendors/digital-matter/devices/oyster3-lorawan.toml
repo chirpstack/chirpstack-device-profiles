@@ -1,0 +1,18 @@
+[device]
+id = "92ac7616-1b96-4322-90e6-17a3a9b096c8"
+name = "Oyster3 LoRaWAN"
+description = "GPS tracker for high-precision outdoor asset tracking on LoRaWAN networks"
+
+[[device.firmware]]
+version = "1.5"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "digital-matter-oyster3-yabby3.js"
+
+[device.metadata]
+product_url = "https://www.digitalmatter.com/devices/oyster-lorawan/"
+documentation_url = "https://www.digitalmatter.com/hubfs/Datasheets%20for%20Website/Oyster3%20Lorawan%20Datasheet%20-%20Digital%20Matter.pdf"

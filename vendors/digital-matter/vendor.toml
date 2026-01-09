@@ -1,0 +1,9 @@
+[vendor]
+id = "138736f1-c8cb-4949-8e8f-102f1b7ba7a8"
+name = "Digital Matter"
+vendor_id = 118
+ouis = ["70b3d5"]
+devices = []
+
+[vendor.metadata]
+homepage = "https://www.digitalmatter.com/"

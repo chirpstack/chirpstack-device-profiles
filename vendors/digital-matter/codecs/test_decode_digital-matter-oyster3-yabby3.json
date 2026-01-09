@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Test 1 digital matter oyster3 & yabby3",
+    "input": {
+      "fPort": 0x01,
+      "bytes": [0x53,0xAB,0x78,0x3C,0x04,0x21,0xF9,0x8E,0x94,0x0A,0xB3]
+    },
+    "expected": {
+      data: {
+        type: "position",
+        inTrip: false,
+        fixFailed: false,
+        batV: 4.48,
+        manDown: null,
+        latitudeDeg: 101.4541139,
+        longitudeDeg: -189.6275708,
+        headingDeg: 208.125,
+        speedKmph: 10
+      },
+      warnings: []
+    }
+  },
+  {
+    "name": "Test 2 digital matter oyster3 & yabby3",
+    "input": {
+      "fPort": 0x02,
+      "bytes": [0x53,0xAB,0x78,0x3C,0x04,0x21,0xF9,0x8E,0x94,0x0A,0xB3]
+    },
+    "expected": {
+      data: {
+        type: "downlink ack",
+        sequence: 83,
+        accepted: false,
+        fwMaj: 171,
+        fwMin: 120
+      },
+      warnings: []
+    }
+  },
+  {
+    "name": "Test 3 digital matter oyster3 & yabby3",
+    "input": {
+      "fPort": 0x03,
+      "bytes": [0x53,0xAB,0x78,0x3C,0x04,0x21,0xF9,0x8E,0x94,0x0A,0xB3]
+    },
+    "expected": {
+      data: {
+        type: 'stats',
+        initialBatV: 4.3,
+        txCount: 22176,
+        tripCount: 204320,
+        gpsSuccesses: 2144,
+        gpsFails: 4224,
+        aveGpsFixS: 484,
+        aveGpsFailS: 285,
+        aveGpsFreshenS: 148,
+        wakeupsPerTrip: 10,
+        uptimeWeeks: 358
+      },
+      warnings: []
+    }
+  },
+  {
+    "name": "Test 4 digital matter oyster3 & yabby3",
+    "input": {
+      "fPort": 0x04,
+      "bytes": [0x53,0xAB,0x78,0x3C,0x04,0x21,0xF9,0x8E,0x94,0x0A,0xB3]
+    },
+    "expected": {
+      data: {
+        type: 'position',
+        batV: 3.55,
+        inTrip: false,
+        fixFailed: false,
+        manDown: true,
+        latitudeDeg: 202.4493824,
+        longitudeDeg: 55.3925632,
+        headingDeg: 45,
+        speedKmph: 155
+      },
+      warnings: []
+    }
+  },
+]

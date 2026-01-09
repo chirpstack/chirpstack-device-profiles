@@ -1,0 +1,18 @@
+[device]
+id = "3b891c9e-1086-4be6-8c02-e3513836ce76"
+name = "Yabby3 LoRaWAN"
+description = "GPS battery-powered GPS tracker for outdoor asset tracking on LoRaWAN networks"
+
+[[device.firmware]]
+version = "1.1"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "digital-matter-oyster3-yabby3.js"
+
+[device.metadata]
+product_url = "https://www.digitalmatter.com/devices/yabby3-for-lorawan/"
+documentation_url = "https://support.digitalmatter.com/yabby3-lorawan%C2%AE/411-yabby-3-lorawan%C2%AE-configuration-and-usage-guide"

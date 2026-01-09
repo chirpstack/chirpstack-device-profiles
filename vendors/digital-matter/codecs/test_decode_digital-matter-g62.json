@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Test 1 digital matter g62",
+    "input": {
+      "fPort": 0x01,
+      "bytes": [0xA0,0x26,0xF5,0xEC,0x16,0xA1,0x08,0x45,0x0A,0x12,0xCA,0xC9,0x33,0x00,0x00,0x17,0x1C,0x23,0x18]
+    },
+    "expected": {
+      data: {
+        _type: 'full data',
+        tripType: 'None',
+        latitudeDeg: -31.9478112,
+        longitudeDeg: 115.8193424,
+        vExtGood: false,
+        gpsCurrent: false,
+        ignition: false,
+        digIn1: true,
+        digIn2: true,
+        digOut: false,
+        headingDeg: 20,
+        speedKmph: 18,
+        batV: 4.04,
+        vExt: 13.257,
+        vAin: 0,
+        tempC: 23,
+        gpsAccM: 28,
+        timestamp: 6179,
+        time: '2026-01-02T11:40:59.000Z'
+      }
+    }
+  },
+  {
+    "name": "Test 2 digital matter g62",
+    "input": {
+      "fPort": 0x03,
+      "bytes": [0xA0,0x26,0xF5,0xEC,0x16,0xA1,0x08,0x45,0x0A,0x12,0xCA,0xC9,0x33,0x00,0x00,0x17,0x1C,0x23,0x18]
+    },
+    "expected": {
+      data: {
+        _type: 'data part 2',
+        vExt: 9.888,
+        vAin: 60.661,
+        tempC: 22,
+        gpsAccM: 161,
+        timestamp: 17672,
+        time: '2026-01-02T14:52:32.000Z'
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[profile]
+id = "f7293b1a-6d02-401e-954f-0a891246474d"
+vendor_profile_id = 0
+region = "EU868"
+mac_version = "1.0.3"
+reg_params_revision = "A"
+supports_otaa = true
+supports_class_b = false
+supports_class_c = false
+max_eirp = 16
+
+[profile.abp]
+rx1_delay = 0
+rx1_dr_offset = 0
+rx2_dr = 0
+rx2_freq = 0
+
+[profile.class_b]
+timeout_secs = 0
+ping_slot_nb_k = 0
+ping_slot_dr = 0
+ping_slot_freq = 0
+
+[profile.class_c]
+timeout_secs = 0
