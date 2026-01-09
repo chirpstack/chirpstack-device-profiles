@@ -1,0 +1,18 @@
+[device]
+id = "dc48d269-c13c-4d63-b135-0e3881d543a8"
+name = "SenseCAP T2000"
+description = "Industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking."
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "SenseCAP-T2000-AB.js"
+
+[device.metadata]
+product_url = "https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-C-p-6582.html"
+documentation_url = "https://wiki.seeedstudio.com/sensecap_t2000_tracker/"
