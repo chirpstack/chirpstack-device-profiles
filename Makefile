@@ -1,7 +1,7 @@
 .PHONY: test nix-start nix-test
 
 serve:
-	docker pull chirpstack/chirpstack-device-profiles:latest
+	docker pull --platform=linux/amd64 chirpstack/chirpstack-device-profiles:latest
 	docker run --rm -u $(id -u):$(id -g) -p 8090:8090 -v '$(shell pwd):/chirpstack-device-profiles' chirpstack/chirpstack-device-profiles:latest -p /chirpstack-device-profiles
 
 build:
