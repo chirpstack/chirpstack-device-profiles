@@ -1,0 +1,18 @@
+[device]
+id = "45f48720-e4f4-401c-9681-ba063f6c978e"
+name = "Milesight AM102L"
+description = "2-in-1 IAQ Sensor (Temperature & Humidity)"
+
+[[device.firmware]]
+version = "1.3"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "am102-l.js"
+
+[device.metadata]
+product_url = "https://www.milesight.com/iot/product/lorawan-sensor/am102"
+documentation_url = "https://www.milesight.com/iot/product/lorawan-sensor/am102"
