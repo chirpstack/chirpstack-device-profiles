@@ -7,6 +7,20 @@ which regions are supported, if the device supports Class-B or Class-C, etc...
 The aim is to build a complete list of LoRaWAN device-profiles that then can
 be imported by ChirpStack or potentially any other LNS.
 
+## Importing into ChirpStack
+
+Example command:
+
+```bash
+# Clone the chirpstack-device-profiles repository.
+git clone https://github.com/chirpstack/chirpstack-device-profiles.git
+
+# Execute the import command.
+chirpstack -c /etc/chirpstack import-device-profiles -d /path/to/chirpstack-device-profiles
+```
+
+See also: [Device profiles documentation](https://www.chirpstack.io/docs/chirpstack/use/device-profiles.html)
+
 ## Adding a new device-profile
 
 ### Fork and clone
