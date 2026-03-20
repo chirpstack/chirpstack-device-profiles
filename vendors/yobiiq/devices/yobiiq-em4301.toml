@@ -1,17 +1,17 @@
 [device]
   # Device name.
-  name = "YOBIIQ EM2101"
+  name = "YOBIIQ EM4301"
 
   # Device description.
-  description = "EM2101 is a 1phase Electricity Meter with built in relay"
+  description = "EM4301 is a 3phase Electricity Meter for direct connection"
 
   # Device metadata (optional).
   [device.metadata]
     # Product URL.
-    product_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"
+    product_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-electricity-meter/"
 
     # Documentation URL.
-    documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"
+    documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-electricity-meter/"
 
 
   # Device firmware version.
@@ -32,4 +32,4 @@
     # Payload codec.
     #
     # In case no codec is available, you can remove this option.
-    codec = "em2101.js"
+    codec = "em4301.js"

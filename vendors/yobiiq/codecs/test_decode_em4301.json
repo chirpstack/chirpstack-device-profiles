@@ -1,0 +1,228 @@
+[
+  {
+    "description": "fPort 0 - MAC command received",
+    "input": {
+      "fPort": 0,
+      "bytes": [0]
+    },
+    "expected": {
+      "data": {
+        "mac": "MAC command received",
+        "fPort": 0,
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Downlink command ACK (succeeded)",
+    "input": {
+      "fPort": 50,
+      "bytes": [0]
+    },
+    "expected": {
+      "data": {
+        "info": "Downlink command succeeded",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Downlink command ACK (failed)",
+    "input": {
+      "fPort": 50,
+      "bytes": [1]
+    },
+    "expected": {
+      "data": {
+        "warning": "Downlink command failed",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Basic device information (hwVersion V1.8, fwVersion V1.5, serial, Class A)",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 9, 1, 8,
+        255, 10, 1, 5,
+        255, 22, 0, 1, 35, 69,
+        255, 15, 0
+      ]
+    },
+    "expected": {
+      "data": {
+        "hardwareVersion": "V1.8",
+        "firmwareVersion": "V1.5",
+        "deviceSerialNumber": 74565,
+        "deviceClass": "Class A",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - AC power-on event",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 11, 1
+      ]
+    },
+    "expected": {
+      "data": {
+        "powerEvent": "AC Power On",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Transformer ratios (primary CT=100, secondary CT=5)",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 30, 0, 100,
+        255, 31, 5
+      ]
+    },
+    "expected": {
+      "data": {
+        "primaryCurrentTransformerRatio": 100,
+        "secondaryCurrentTransformerRatio": 5,
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Device model string",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 40, 69, 77, 52, 51, 48, 49
+      ]
+    },
+    "expected": {
+      "data": {
+        "deviceModel": "EM4301",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 1 - 3-phase measurements: index, timestamp, L1/L2/L3 voltages (230V), L1/L2/L3 currents (5A), frequency (50Hz)",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        1, 0, 0, 0, 0, 1,
+        1, 1, 0, 0, 3, 232,
+        1, 12, 0, 0, 8, 252,
+        1, 13, 0, 0, 8, 252,
+        1, 14, 0, 0, 8, 252,
+        1, 16, 0, 0, 19, 136,
+        1, 17, 0, 0, 19, 136,
+        1, 18, 0, 0, 19, 136,
+        1, 35, 19, 136
+      ]
+    },
+    "expected": {
+      "data": {
+        "index": 1,
+        "timestamp": 1000,
+        "voltageL1N": { "data": 230, "unit": "V" },
+        "voltageL2N": { "data": 230, "unit": "V" },
+        "voltageL3N": { "data": 230, "unit": "V" },
+        "currentL1": { "data": 5000, "unit": "mA" },
+        "currentL2": { "data": 5000, "unit": "mA" },
+        "currentL3": { "data": 5000, "unit": "mA" },
+        "frequency": { "data": 50, "unit": "Hz" },
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 1 - 3-phase active power per phase (1000/2000/3000 W) and total system power (6 kW, 6.0 kvar)",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        1, 20, 0, 0, 3, 232,
+        1, 21, 0, 0, 7, 208,
+        1, 22, 0, 0, 11, 184,
+        1, 36, 0, 0, 0, 6,
+        1, 37, 0, 0, 23, 112
+      ]
+    },
+    "expected": {
+      "data": {
+        "activePowerL1": { "data": 1000, "unit": "W" },
+        "activePowerL2": { "data": 2000, "unit": "W" },
+        "activePowerL3": { "data": 3000, "unit": "W" },
+        "totalSystemActivePower": { "data": 6, "unit": "kW" },
+        "totalSystemReactivePower": { "data": 6, "unit": "kvar" },
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 1 - Active energy import L123 T1 and T2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        1, 4, 0, 188, 97, 78,
+        1, 5, 0, 0, 39, 16
+      ]
+    },
+    "expected": {
+      "data": {
+        "activeEnergyImportL123T1": { "data": 12345678, "unit": "Wh" },
+        "activeEnergyImportL123T2": { "data": 10000, "unit": "Wh" },
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 99 - Incorrect fPort",
+    "input": {
+      "fPort": 99,
+      "bytes": [0]
+    },
+    "expected": {
+      "data": {
+        "error": "Incorrect fPort",
+        "fPort": 99,
+        "codecVersion": "1.0.1",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  }
+]

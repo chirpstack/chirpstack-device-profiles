@@ -1,0 +1,108 @@
+[
+  {
+    "description": "Config - Restart device",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "restart", "Value": 1 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 11, 1]
+    }
+  },
+  {
+    "description": "Config - Set primary current transformer ratio to 100",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "primaryCurrentTransformerRatio", "Value": 100 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 30, 0, 100]
+    }
+  },
+  {
+    "description": "Config - Set secondary current transformer ratio to 5",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "secondaryCurrentTransformerRatio", "Value": 5 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 31, 5]
+    }
+  },
+  {
+    "description": "Config - Set primary voltage transformer ratio to 400",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "primaryVoltageTransformerRatio", "Value": 400 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 32, 0, 0, 1, 144]
+    }
+  },
+  {
+    "description": "Config - Set secondary voltage transformer ratio to 100",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "secondaryVoltageTransformerRatio", "Value": 100 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 33, 0, 100]
+    }
+  },
+  {
+    "description": "Measure - Configure periodic package: interval 30, mode 0, status enabled, measurements: L1/L2/L3 voltages",
+    "input": {
+      "data": {
+        "Type": "Measure",
+        "Measure": {
+          "Interval": 30,
+          "Mode": 0,
+          "Status": 1,
+          "Measurement": ["voltageL1N", "voltageL2N", "voltageL3N"]
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 20, 30, 255, 21, 0, 255, 22, 1, 255, 23, 12, 13, 14]
+    }
+  },
+  {
+    "description": "Measure - Configure periodic package: interval 60, measurements: index, timestamp, L123 active energy, L1/L2/L3 current",
+    "input": {
+      "data": {
+        "Type": "Measure",
+        "Measure": {
+          "Interval": 60,
+          "Measurement": ["index", "timestamp", "activeEnergyImportL123T1", "currentL1", "currentL2", "currentL3"]
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 20, 60, 255, 23, 0, 1, 4, 16, 17, 18]
+    }
+  },
+  {
+    "description": "Measure - Set mode only (mode 1 = push on change)",
+    "input": {
+      "data": {
+        "Type": "Measure",
+        "Measure": {
+          "Mode": 1
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 21, 1]
+    }
+  }
+]
