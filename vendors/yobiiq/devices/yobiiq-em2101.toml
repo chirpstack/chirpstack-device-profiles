@@ -1,0 +1,35 @@
+[device]
+  # Device name.
+  name = "YOBIIQ EM2101"
+
+  # Device description.
+  description = "EM2101 is a 1phase Electricity Meter with built in relay"
+
+  # Device metadata (optional).
+  [device.metadata]
+    # Product URL.
+    product_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"
+
+    # Documentation URL.
+    documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"
+
+
+  # Device firmware version.
+  #
+  # This section can be repeated in case multiple firmware versions exist.
+  # As a new firmware version can change the supported profiles / regions and
+  # payload format, each firmware version has its own profiles and codec
+  # configuration.
+  [[device.firmware]]
+    # Firmware version.
+    version = "1.0.0"
+
+    # List of supported profiles.
+    #
+    # This list refers to one or multiple profiles in the profiles/ directory.
+    profiles = ["EU868-1_0_3.toml"]
+
+    # Payload codec.
+    #
+    # In case no codec is available, you can remove this option.
+    codec = "em2101.js"

@@ -1,0 +1,93 @@
+[profile]
+  # ID.
+  #
+  # Vendor Profile ID (16 bit).
+  #
+  # Encoding: 0xRMC0  (one nibble each, lowest nibble reserved=0)
+  #   R = Region  : EU868=0x1, US915=0x2, AU915=0x3, AS923=0x4, AS923-2=0x5,
+  #                 AS923-3=0x6, AS923-4=0x7, CN470=0x8, IN865=0x9, KR920=0xA, RU864=0xB
+  #   M = MAC ver : 1.0.0=0x1, 1.0.1=0x2, 1.0.2=0x3, 1.0.3=0x4, 1.0.4=0x5, 1.1.0=0x6
+  #   C = Class   : A=0x1, B=0x2, C=0x3
+  #
+  # See also (4.2.4):
+  # https://resources.lora-alliance.org/technical-recommendations/tr005-lorawan-device-identification-qr-codes
+  vendor_profile_id = 5392 # EU868 (0x1) + 1.0.4 (0x5) + Class A (0x1) = 0x1510
+
+  # Region Common-name.
+  #
+  # Please refer to the LoRaWAN Regional Parameters specification for the available
+  # common-names.
+  region = "EU868"
+
+  # LoRaWAN mac-version (1.x.y).
+  mac_version = "1.0.4"
+
+  # LoRaWAN Regional Parameters revision.
+  #
+  # Examples: A, B, RP002-1.x.y.
+  reg_params_revision = "RP002-1.0.3"
+
+  # Device supports OTAA.
+  supports_otaa = true
+
+  # Device supports Class-B.
+  #
+  # If set to true, do not forget to configure class_b section below.
+  supports_class_b = false
+
+  # Device supports Class-C.
+  #
+  # If set to true, do not forget to configure class_c section below.
+  supports_class_c = false
+
+  # Max EIRP supported by device.
+  max_eirp = 16
+
+  # ABP settings.
+  #
+  # This section must be configured in case supports_otaa is set to false.
+  [profile.abp]
+    # RX1 Delay.
+    rx1_delay = 1
+
+    # RX1 DR offset.
+    rx1_dr_offset = 0
+
+    # RX2 DR.
+    rx2_dr = 0
+
+    # RX2 frequency (Hz).
+    rx2_freq = 869525000
+
+
+  # Class-B settings.
+  #
+  # This section must be configured in case supports_class_b is set to true.
+  [profile.class_b]
+    # Timeout in seconds.
+    #
+    # In case of an confirmed downlink, the device is expected to respond with
+    # an ack within the given amount of time.
+    timeout_secs = 120
+
+    # Ping-slot numbers (k).
+    #
+    # The actual amount is 2^k. Valid options are: 0 - 7.
+    ping_slot_nb_k = 0
+
+    # Ping-slot DR.
+    ping_slot_dr = 0
+
+    # Ping-slot frequency (Hz).
+    ping_slot_freq = 869525000
+
+
+  # Class-C settings.
+  #
+  # This section must be configured in case supports_class_c is set to true.
+  [profile.class_c]
+    # Timeout in seconds.
+    #
+    # In case of an confirmed downlink, the device is expected to respond with
+    # an ack within the given amount of time.
+    timeout_secs = 120

@@ -1,0 +1,171 @@
+[
+  {
+    "description": "fPort 0 - MAC command received",
+    "input": {
+      "fPort": 0,
+      "bytes": [0]
+    },
+    "expected": {
+      "data": {
+        "mac": "MAC command received",
+        "fPort": 0,
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Downlink command ACK (succeeded)",
+    "input": {
+      "fPort": 50,
+      "bytes": [0]
+    },
+    "expected": {
+      "data": {
+        "info": "Downlink command succeeded",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Basic device information (hwVersion, fwVersion, serialNumber, deviceClass)",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 9, 1, 8,
+        255, 10, 1, 5,
+        255, 22, 0, 1, 35, 69,
+        255, 15, 0
+      ]
+    },
+    "expected": {
+      "data": {
+        "hardwareVersion": "V1.8",
+        "firmwareVersion": "V1.5",
+        "deviceSerialNumber": 74565,
+        "deviceClass": "Class A",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Relay status HIGH and AC power-on event",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 0, 1,
+        255, 11, 1
+      ]
+    },
+    "expected": {
+      "data": {
+        "relayStatus": "HIGH",
+        "powerEvent": "AC Power On",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 50 - Current limit fallback (10.0 A) and voltage limit fallback (260 V)",
+    "input": {
+      "fPort": 50,
+      "bytes": [
+        255, 60, 0, 100,
+        255, 61, 1, 4
+      ]
+    },
+    "expected": {
+      "data": {
+        "currentLimitFallback": { "data": 10, "unit": "A" },
+        "voltageLimitFallback": { "data": 260, "unit": "V" },
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 1 - Measurement data: index, timestamp, active energy, voltage (230V), current (5A), active power (1150W), frequency (50Hz)",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        1, 0, 0, 0, 0, 1,
+        1, 1, 0, 0, 3, 232,
+        1, 4, 0, 188, 97, 78,
+        1, 12, 0, 0, 8, 252,
+        1, 16, 0, 0, 19, 136,
+        1, 20, 0, 0, 4, 126,
+        1, 35, 19, 136
+      ]
+    },
+    "expected": {
+      "data": {
+        "index": 1,
+        "timestamp": 1000,
+        "activeEnergyImportL1T1": { "data": 12345678, "unit": "Wh" },
+        "voltageL1N": { "data": 230, "unit": "V" },
+        "currentL1": { "data": 5000, "unit": "mA" },
+        "activePowerL1": { "data": 1150, "unit": "W" },
+        "frequency": { "data": 50, "unit": "Hz" },
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 11 - Change of state: relay CLOSED, digital input OPEN",
+    "input": {
+      "fPort": 11,
+      "bytes": [
+        1, 1, 1,
+        2, 2, 0
+      ]
+    },
+    "expected": {
+      "data": {
+        "relayStatus": "CLOSED",
+        "digitalInputStatus": "OPEN",
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  },
+  {
+    "description": "fPort 60 - Event log: relay switched off due to over-current, with timestamp and current value",
+    "input": {
+      "fPort": 60,
+      "bytes": [
+        253, 1, 1,
+        253, 3, 0, 0, 3, 232,
+        253, 5, 0, 0, 19, 136
+      ]
+    },
+    "expected": {
+      "data": {
+        "relaySwitchingOffReason": "Due to too high current limit",
+        "relaySwitchOffTime": 1000,
+        "currentWhenRelaySwitchingOff": 5000,
+        "codecVersion": "1.0.1",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V."
+      }
+    }
+  }
+]

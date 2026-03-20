@@ -1,0 +1,127 @@
+[
+  {
+    "description": "Config - Restart device",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "restart", "Value": 1 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 11, 1]
+    }
+  },
+  {
+    "description": "Config - Set current limit fallback to 10.0 A (raw: 100)",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "currentLimitFallback", "Value": 100 }
+      }
+    },
+    "expected": {
+      "bytes": [255, 50, 0, 100]
+    }
+  },
+  {
+    "description": "Config - Set digital input enabled",
+    "input": {
+      "data": {
+        "Type": "Config",
+        "Config": { "Param": "digitalInput", "Value": 1 }
+      }
+    },
+    "expected": {
+      "bytes": [8, 71, 1]
+    }
+  },
+  {
+    "description": "Dynamic - Set current limit to 100.0 A (raw: 1000)",
+    "input": {
+      "data": {
+        "Type": "Dynamic",
+        "Dynamic": { "Param": "currentLimit", "Value": 1000 }
+      }
+    },
+    "expected": {
+      "bytes": [1, 50, 3, 232]
+    }
+  },
+  {
+    "description": "Dynamic - Set power limit to 5000 W",
+    "input": {
+      "data": {
+        "Type": "Dynamic",
+        "Dynamic": { "Param": "powerLimit", "Value": 5000 }
+      }
+    },
+    "expected": {
+      "bytes": [1, 52, 19, 136]
+    }
+  },
+  {
+    "description": "Relay - Close relay (relayCommand = 1)",
+    "input": {
+      "data": {
+        "Type": "Relay",
+        "Relay": { "Param": "relayCommand", "Value": 1 }
+      }
+    },
+    "expected": {
+      "bytes": [7, 72, 1]
+    }
+  },
+  {
+    "description": "Relay - Open relay (relayCommand = 0)",
+    "input": {
+      "data": {
+        "Type": "Relay",
+        "Relay": { "Param": "relayCommand", "Value": 0 }
+      }
+    },
+    "expected": {
+      "bytes": [7, 72, 0]
+    }
+  },
+  {
+    "description": "Relay - Set control mode to LoRa (controlMode = 1)",
+    "input": {
+      "data": {
+        "Type": "Relay",
+        "Relay": { "Param": "controlMode", "Value": 1 }
+      }
+    },
+    "expected": {
+      "bytes": [7, 71, 1]
+    }
+  },
+  {
+    "description": "Measure - Configure periodic package: interval 10, mode 0, status enabled, measurements: voltage, current, active power",
+    "input": {
+      "data": {
+        "Type": "Measure",
+        "Measure": {
+          "Interval": 10,
+          "Mode": 0,
+          "Status": 1,
+          "Measurement": ["voltageL1N", "currentL1", "activePowerL1"]
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 20, 10, 255, 21, 0, 255, 22, 1, 255, 23, 12, 16, 20]
+    }
+  },
+  {
+    "description": "RequestSettings - Request current and voltage fallback limits",
+    "input": {
+      "data": {
+        "Type": "RequestSettings",
+        "RequestSettings": ["currentLimitFallback", "voltageLimitFallback"]
+      }
+    },
+    "expected": {
+      "bytes": [2, 11, 60, 2, 11, 61]
+    }
+  }
+]
