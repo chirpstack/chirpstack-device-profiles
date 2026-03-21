@@ -1,0 +1,13 @@
+[device]
+id = "a2c24182-cef3-4a07-9877-785eddb9d6d2"
+name = "YOBIIQ SD1001-AC"
+description = "SD1001 Smoke Detector powered by AC"
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classA.toml"]
+codec = "sd1001.js"
+
+[device.metadata]
+product_url = "https://yobiiq.com/products/smoke-detector/"
+documentation_url = "https://yobiiq.com/products/smoke-detector/"

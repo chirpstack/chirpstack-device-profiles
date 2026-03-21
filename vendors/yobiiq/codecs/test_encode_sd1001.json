@@ -1,0 +1,62 @@
+[
+	{
+		"description": "Set reporting interval to 300 seconds",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"Config": {
+					"Param": "reportingInterval",
+					"Value": 300
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 3, 194, 1]
+		}
+	},
+	{
+		"description": "Enable smoke detector alarm",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"Config": {
+					"Param": "smokeDetector",
+					"Value": 1
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 0, 1]
+		}
+	},
+	{
+		"description": "Silence buzzer for 60 seconds",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"Config": {
+					"Param": "silenceBuzzer",
+					"Value": 60
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 10, 0, 60]
+		}
+	},
+	{
+		"description": "Enable confirmed uplink",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"Config": {
+					"Param": "confirmedUplink",
+					"Value": 1
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 1, 1]
+		}
+	}
+]

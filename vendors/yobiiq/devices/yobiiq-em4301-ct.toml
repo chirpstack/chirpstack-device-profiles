@@ -1,35 +1,13 @@
 [device]
-  # Device name.
-  name = "YOBIIQ EM4301-CT"
+id = "1e66fe6a-93fc-4889-b4e0-6755554225c7"
+name = "YOBIIQ EM4301-CT"
+description = "EM4301-CT is a 3phase Electricity Meter with measurement through current transformers"
 
-  # Device description.
-  description = "EM4301-CT is a 3phase Electricity Meter with measurement through current transformers"
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classC.toml"]
+codec = "em4301.js"
 
-  # Device metadata (optional).
-  [device.metadata]
-    # Product URL.
-    product_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"
-
-    # Documentation URL.
-    documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"
-
-
-  # Device firmware version.
-  #
-  # This section can be repeated in case multiple firmware versions exist.
-  # As a new firmware version can change the supported profiles / regions and
-  # payload format, each firmware version has its own profiles and codec
-  # configuration.
-  [[device.firmware]]
-    # Firmware version.
-    version = "1.0.0"
-
-    # List of supported profiles.
-    #
-    # This list refers to one or multiple profiles in the profiles/ directory.
-    profiles = ["EU868-classC.toml"]
-
-    # Payload codec.
-    #
-    # In case no codec is available, you can remove this option.
-    codec = "em4301.js"
+[device.metadata]
+product_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"
+documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"

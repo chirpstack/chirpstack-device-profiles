@@ -1,24 +1,8 @@
 [vendor]
-  # Vendor name.
-  name = "YOBIIQ"
+id = "dac78711-5cc1-4682-99bc-e8088a555528"
+name = "YOBIIQ"
+vendor_id = 415
+ouis = ["FC48C9"]
 
-  # LoRa Alliance assigned Vendor ID.
-  #
-  # See also:
-  # ttps://resources.lora-alliance.org/document/lora-alliance-vendor-id-20230915
-  vendor_id = 415
-
-  # OUIs owned by vendor (optional).
-  # 
-  # Example: ouis = ["010203", "40506"]
-  ouis = ["FC48C9"]
-
-  # List of devices.
-  #
-  # This list refers to one or multiple devices in the devices/ directory.
-  devices = ["example.toml"]
-
-  # Vendor metadata (optional).
-  [vendor.metadata]
-    # Vendor homepage.
-    homepage = "https://www.yobiiq.com"
+[vendor.metadata]
+homepage = "https://www.yobiiq.com"
