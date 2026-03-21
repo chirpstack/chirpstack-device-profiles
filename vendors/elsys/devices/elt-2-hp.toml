@@ -7,7 +7,6 @@ description = "Multi-sensor with 2 external sensor inputs. Internal temperature,
 version = "1.0"
 profiles = [
     "EU868-1_0_3.toml",
-    "EU868-1_0_3-CLASS_C.toml",
 ]
 codec = "elsys.js"
 
