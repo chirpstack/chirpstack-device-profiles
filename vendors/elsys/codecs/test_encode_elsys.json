@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Test encode empty (no downlink encoding supported)",
+    "input": {
+      "data": {}
+    },
+    "expected": {
+      "bytes": []
+    }
+  }
+]
