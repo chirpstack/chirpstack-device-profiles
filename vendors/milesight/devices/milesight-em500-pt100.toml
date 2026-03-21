@@ -1,0 +1,18 @@
+[device]
+id = "6520e342-96dd-4366-842d-63b5bd800acb"
+name = "Milesight EM500-PT100"
+description = "Industrial Temperature Sensor (PT100)"
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "em500-pt100.js"
+
+[device.metadata]
+product_url = "https://www.milesight.com/iot/product/lorawan-sensor/em500-pt100"
+documentation_url = "https://www.milesight.com/iot/product/lorawan-sensor/em500-pt100"

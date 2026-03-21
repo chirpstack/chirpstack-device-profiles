@@ -12,6 +12,7 @@ devices = [
     "milesight-em300-sld-zld.toml",
     "milesight-em310-tilt.toml",
     "milesight-em320-th.toml",
+    "milesight-em500-pt100.toml",
 ]
 
 [vendor.metadata]

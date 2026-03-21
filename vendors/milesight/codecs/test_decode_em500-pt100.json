@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Test decode Milesight EM500-PT100",
+    "input": {
+      "bytes": [1, 117, 100, 3, 103, 44, 1]
+    },
+    "expected": {
+      "data": {
+        "battery": 100,
+        "temperature": 30
+      }
+    }
+  }
+]
