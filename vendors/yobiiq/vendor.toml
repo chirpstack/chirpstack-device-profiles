@@ -6,7 +6,7 @@
   #
   # See also:
   # ttps://resources.lora-alliance.org/document/lora-alliance-vendor-id-20230915
-  vendor_id = 0415
+  vendor_id = 415
 
   # OUIs owned by vendor (optional).
   # 
