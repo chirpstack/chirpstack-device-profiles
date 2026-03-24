@@ -1,0 +1,18 @@
+[device]
+id = "c5d5f820-c181-4f77-bd75-757281c2b89a"
+name = "DL-TRS11"
+description = "The Decentlab DL-TRS11 includes a volumetric water content (VWC), temperature, and dielectric permittivity sensor. It is suitable for irrigation control, smart agriculture, greenhouse and soilless plantations, parks, and golf courses."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-trs11.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-trs11.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/soil-moisture-temperature-and-electrical-conductivity-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-TRS11-datasheet.pdf"

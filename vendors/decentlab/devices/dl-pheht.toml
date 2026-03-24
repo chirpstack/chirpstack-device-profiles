@@ -1,0 +1,18 @@
+[device]
+id = "d21c508d-1462-49cc-a12a-0327417e9e15"
+name = "DL-PHEHT"
+description = "The Decentlab DL-PHEHT is a water ph sensor for LoRaWAN®. Suitable for applications such as industrial and municipal sewage treatment plants, wastewater management (nitrification and de-nitrification), surface water monitoring, and drinking water monitoring."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-pheht.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-pheht.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/ph-orp-and-temperature-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-PHEHT-datasheet.pdf"

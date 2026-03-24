@@ -1,0 +1,103 @@
+[
+  {
+    "name": "dl-gmm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        83,
+        43,
+        0,
+        3,
+        135,
+        38,
+        137,
+        32,
+        129,
+        20,
+        130,
+        151,
+        165,
+        115,
+        128,
+        207,
+        129,
+        112,
+        11,
+        188
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21291,
+        "photosynthetically_active_radiation": {
+          "displayName": "Photosynthetically active radiation",
+          "value": 183,
+          "unit": "\u00b5mol\u22c5m\u207b\u00b2\u22c5s\u207b\u00b9"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 23.36,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 27.6,
+          "unit": "%"
+        },
+        "co2_concentration": {
+          "displayName": "CO2 concentration",
+          "value": 663,
+          "unit": "ppm"
+        },
+        "atmospheric_pressure": {
+          "displayName": "Atmospheric pressure",
+          "value": 95.87,
+          "unit": "kPa"
+        },
+        "vapor_pressure_deficit": {
+          "displayName": "Vapor pressure deficit",
+          "value": 2.07,
+          "unit": "kPa"
+        },
+        "dew_point": {
+          "displayName": "Dew point",
+          "value": 3.68,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.004,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-gmm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        82,
+        133,
+        0,
+        2,
+        11,
+        188
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21125,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.004,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

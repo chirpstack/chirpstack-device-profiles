@@ -1,0 +1,88 @@
+[
+  {
+    "name": "dl-ntu",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        35,
+        50,
+        0,
+        3,
+        0,
+        0,
+        136,
+        133,
+        1,
+        62,
+        1,
+        62,
+        2,
+        51,
+        11,
+        16
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 9010,
+        "status": {
+          "displayName": "Status",
+          "value": 0
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 21.81,
+          "unit": "\u00b0C"
+        },
+        "turbidity_in_ntu": {
+          "displayName": "Turbidity in NTU",
+          "value": 31.8,
+          "unit": "NTU"
+        },
+        "turbidity_in_fnu": {
+          "displayName": "Turbidity in FNU",
+          "value": 31.8,
+          "unit": "FNU"
+        },
+        "turbidity_in_mg_l": {
+          "displayName": "Turbidity in mg/L",
+          "value": 56.3,
+          "unit": "mg\u22c5L\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.832,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-ntu",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        35,
+        50,
+        0,
+        2,
+        11,
+        16
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 9010,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.832,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "dl-alb",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        82,
+        133,
+        0,
+        3,
+        128,
+        153,
+        128,
+        34,
+        11,
+        211
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21125,
+        "incoming_radiation": {
+          "displayName": "Incoming radiation",
+          "value": 15.3,
+          "unit": "W\u22c5m\u207b\u00b2"
+        },
+        "reflected_radiation": {
+          "displayName": "Reflected radiation",
+          "value": 3.4,
+          "unit": "W\u22c5m\u207b\u00b2"
+        },
+        "albedo": {
+          "displayName": "albedo",
+          "value": 0.2222222222222222
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.027,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-alb",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        82,
+        133,
+        0,
+        2,
+        11,
+        211
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21125,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.027,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "dl-blg",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        48,
+        197,
+        0,
+        3,
+        164,
+        12,
+        0,
+        129,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 12485,
+        "voltage_ratio": {
+          "displayName": "Voltage ratio",
+          "value": 0.006409406661987305
+        },
+        "thermistor_resistance": {
+          "displayName": "Thermistor resistance",
+          "value": 115020.68221552655,
+          "unit": "\u03a9"
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 22.028848392450755,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-blg",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        48,
+        197,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 12485,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

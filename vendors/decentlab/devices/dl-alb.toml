@@ -1,0 +1,17 @@
+[device]
+id = "0fabd1a4-aebc-4df0-903f-1abb2162302a"
+name = "DL-ALB"
+description = "The Decentlab DL-ALB is an albedometer sensor for LoRaWAN®. Suitable for applications such as solar panel arrays, incoming and reflected shortwave radiation measurement, agricultural measurements, and ecological and hydrological weather networks."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-alb.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-alb.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/albedometer-sensor-for-lorawan"

@@ -1,0 +1,63 @@
+[
+  {
+    "name": "dl-zn1",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        17,
+        17,
+        0,
+        3,
+        64,
+        154,
+        0,
+        134,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4369,
+        "dendrometer_position": {
+          "displayName": "Dendrometer position",
+          "value": 976.9296646118164,
+          "unit": "\u00b5m"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-zn1",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        17,
+        17,
+        0,
+        2,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4369,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

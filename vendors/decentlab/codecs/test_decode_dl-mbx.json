@@ -1,0 +1,67 @@
+[
+  {
+    "name": "dl-mbx",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        47,
+        0,
+        3,
+        4,
+        210,
+        0,
+        1,
+        11,
+        177
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 303,
+        "distance": {
+          "displayName": "Distance",
+          "value": 1234,
+          "unit": "mm"
+        },
+        "number_of_valid_samples": {
+          "displayName": "Number of valid samples",
+          "value": 1
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.993,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-mbx",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        47,
+        0,
+        2,
+        11,
+        177
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 303,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.993,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

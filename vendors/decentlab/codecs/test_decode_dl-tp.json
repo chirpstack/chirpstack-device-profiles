@@ -1,0 +1,166 @@
+[
+  {
+    "name": "dl-tp",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        62,
+        62,
+        0,
+        3,
+        138,
+        188,
+        138,
+        146,
+        138,
+        160,
+        138,
+        132,
+        138,
+        179,
+        138,
+        137,
+        138,
+        195,
+        138,
+        173,
+        138,
+        183,
+        138,
+        146,
+        138,
+        161,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        252
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 15934,
+        "temperature_at_level_0": {
+          "displayName": "Temperature at level 0",
+          "value": 27.48,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_1": {
+          "displayName": "Temperature at level 1",
+          "value": 27.06,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_2": {
+          "displayName": "Temperature at level 2",
+          "value": 27.2,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_3": {
+          "displayName": "Temperature at level 3",
+          "value": 26.92,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_4": {
+          "displayName": "Temperature at level 4",
+          "value": 27.39,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_5": {
+          "displayName": "Temperature at level 5",
+          "value": 26.97,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_6": {
+          "displayName": "Temperature at level 6",
+          "value": 27.55,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_7": {
+          "displayName": "Temperature at level 7",
+          "value": 27.33,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_8": {
+          "displayName": "Temperature at level 8",
+          "value": 27.43,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_9": {
+          "displayName": "Temperature at level 9",
+          "value": 27.06,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_10": {
+          "displayName": "Temperature at level 10",
+          "value": 27.21,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_11": {
+          "displayName": "Temperature at level 11",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_12": {
+          "displayName": "Temperature at level 12",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_13": {
+          "displayName": "Temperature at level 13",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_14": {
+          "displayName": "Temperature at level 14",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_15": {
+          "displayName": "Temperature at level 15",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.812,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-tp",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        62,
+        62,
+        0,
+        2,
+        10,
+        252
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 15934,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.812,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

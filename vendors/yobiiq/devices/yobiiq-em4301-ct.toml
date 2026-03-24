@@ -1,0 +1,13 @@
+[device]
+id = "1e66fe6a-93fc-4889-b4e0-6755554225c7"
+name = "YOBIIQ EM4301-CT"
+description = "EM4301-CT is a 3phase Electricity Meter with measurement through current transformers"
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classC.toml"]
+codec = "em4301.js"
+
+[device.metadata]
+product_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"
+documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-ct-electricity-meter/"

@@ -1,0 +1,17 @@
+[device]
+id = "7a57a900-220e-4a55-aede-157a0228d153"
+name = "DL-RHC"
+description = "The Decentlab DL-RCH is equipped with high-precision air temperature and humidity sensors for environmental monitoring. Suitable for smart agriculture, urban heat islands, greenhouses, frost alarming, and building automation."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-rhc.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-rhc.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/high-precision-air-temperature-and-humidity-sensor-with-radiation-shield-for-lorawan"

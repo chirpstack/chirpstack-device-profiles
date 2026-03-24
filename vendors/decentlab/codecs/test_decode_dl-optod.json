@@ -1,0 +1,88 @@
+[
+  {
+    "name": "dl-optod",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        24,
+        108,
+        0,
+        3,
+        0,
+        0,
+        136,
+        98,
+        166,
+        24,
+        131,
+        101,
+        131,
+        101,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6252,
+        "status": {
+          "displayName": "Status",
+          "value": 0
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 21.46,
+          "unit": "\u00b0C"
+        },
+        "oxygen_saturation": {
+          "displayName": "Oxygen saturation",
+          "value": 97.52,
+          "unit": "%"
+        },
+        "oxygen_concentration": {
+          "displayName": "Oxygen concentration",
+          "value": 8.69,
+          "unit": "mg\u22c5L\u207b\u00b9"
+        },
+        "oxygen_concentration_alt": {
+          "displayName": "Oxygen concentration (alt)",
+          "value": 8.69,
+          "unit": "ppm"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-optod",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        24,
+        108,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6252,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

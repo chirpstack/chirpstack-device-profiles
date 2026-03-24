@@ -1,0 +1,166 @@
+[
+	{
+		"description": "fPort 0 - MAC command",
+		"input": {
+			"fPort": 0,
+			"bytes": [0]
+		},
+		"expected": {
+			"data": {
+				"mac": "MAC COMMAND RECEIVED",
+				"fPort": 0,
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 50 - downlink success",
+		"input": {
+			"fPort": 50,
+			"bytes": [0]
+		},
+		"expected": {
+			"data": {
+				"info": "DOWNLINK COMMAND SUCCEEDED",
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 50 - generic registers",
+		"input": {
+			"fPort": 50,
+			"bytes": [
+				255, 100, 1,
+				255, 109, 12, 228,
+				255, 159, 2,
+				255, 160, 1
+			]
+		},
+		"expected": {
+			"data": {
+				"deviceStatus": "NORMAL MODE",
+				"batteryVoltage": 3.3,
+				"deviceClass": "CLASS C",
+				"adr": "ENABLED",
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 3 - device data with aliases",
+		"input": {
+			"fPort": 3,
+			"bytes": [
+				1, 19, 0, 0, 48, 57,
+				1, 26, 0, 0, 4, 76,
+				1, 37, 0, 0, 8, 252,
+				1, 40, 0, 0, 0, 25
+			]
+		},
+		"expected": {
+			"data": {
+				"electricityDeliveredToClient": 12345,
+				"totalImportedActiveEnergy": 12345,
+				"electricityPowerDelivered": 1100,
+				"totalImportedActivePower": 1100,
+				"voltageL1": 230,
+				"currentL1": 25,
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 11 - alarm data",
+		"input": {
+			"fPort": 11,
+			"bytes": [
+				160, 122, 9, 41,
+				161, 167, 1
+			]
+		},
+		"expected": {
+			"data": {
+				"internalCircuitTemperature": 23.45,
+				"lorawanWatchdogAlarm": "ALARM",
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 20 - historic data with one measurement",
+		"input": {
+			"fPort": 20,
+			"bytes": [
+				1, 254, 0, 0, 3, 232,
+				160, 19, 0, 10, 0, 0, 0, 100
+			]
+		},
+		"expected": {
+			"data": {
+				"packageTimestamp": 1000,
+				"listOfMeasurements": [
+					{
+						"name": "electricityDeliveredToClient",
+						"data": 100,
+						"alias": "totalImportedActiveEnergy",
+						"ts": 990
+					}
+				],
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "fPort 100 - parameter data",
+		"input": {
+			"fPort": 100,
+			"bytes": [
+				255, 180, 1,
+				255, 221, 0, 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255
+			]
+		},
+		"expected": {
+			"data": {
+				"dsmrProfile": "LUX",
+				"decryptionKey": "00112233445566778899AABBCCDDEEFF",
+				"codecVersion": "1.0.0",
+				"genericModel": "DSMR",
+				"productCode": "P1002005",
+				"manufacturer": "YOBIIQ B.V."
+			},
+			"errors": [],
+			"warnings": []
+		}
+	}
+]

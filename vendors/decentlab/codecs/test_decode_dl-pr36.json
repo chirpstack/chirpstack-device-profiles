@@ -1,0 +1,68 @@
+[
+  {
+    "name": "dl-pr36",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        43,
+        0,
+        3,
+        128,
+        103,
+        151,
+        129,
+        12,
+        43
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 811,
+        "pressure": {
+          "displayName": "Pressure",
+          "value": 0.0125732421875,
+          "unit": "bar"
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 23.50390625,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.115,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-pr36",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        43,
+        0,
+        2,
+        12,
+        43
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 811,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.115,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

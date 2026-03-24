@@ -1,0 +1,63 @@
+[
+  {
+    "name": "dl-dlr2-008",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        7,
+        223,
+        0,
+        3,
+        23,
+        222,
+        0,
+        141,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2015,
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 20.031064968287208,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dlr2-008",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        7,
+        223,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2015,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

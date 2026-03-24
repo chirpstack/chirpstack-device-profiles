@@ -1,0 +1,96 @@
+[
+  {
+    "name": "dl-cws",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        70,
+        57,
+        0,
+        3,
+        138,
+        119,
+        138,
+        149,
+        151,
+        122,
+        135,
+        76,
+        128,
+        71,
+        138,
+        94,
+        11,
+        116
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17977,
+        "surface_temperature": {
+          "displayName": "Surface temperature",
+          "value": 26.79,
+          "unit": "\u00b0C"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 27.09,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 60.1,
+          "unit": "%"
+        },
+        "dew_point": {
+          "displayName": "Dew point",
+          "value": 18.68,
+          "unit": "\u00b0C"
+        },
+        "angle": {
+          "displayName": "Angle",
+          "value": 71,
+          "unit": "\u00b0"
+        },
+        "sensor_temperature": {
+          "displayName": "Sensor temperature",
+          "value": 26.54,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.932,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-cws",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        70,
+        57,
+        0,
+        2,
+        11,
+        116
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17977,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.932,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

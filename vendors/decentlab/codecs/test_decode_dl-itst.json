@@ -1,0 +1,68 @@
+[
+  {
+    "name": "dl-itst",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        217,
+        0,
+        3,
+        4,
+        249,
+        4,
+        196,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 729,
+        "temperature_target": {
+          "displayName": "Temperature target",
+          "value": 27.3,
+          "unit": "\u00b0C"
+        },
+        "temperature_head": {
+          "displayName": "Temperature head",
+          "value": 22,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-itst",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        217,
+        0,
+        2,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 729,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

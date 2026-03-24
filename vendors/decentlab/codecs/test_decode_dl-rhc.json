@@ -1,0 +1,50 @@
+[
+  {
+    "name": "dl-rhc",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        224,
+        0,
+        3,
+        169,
+        253,
+        1,
+        52,
+        28,
+        162,
+        133,
+        243,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 736,
+        "sensor_id": {
+          "displayName": "Sensor ID",
+          "value": 20228605
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 73.3,
+          "unit": "%"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 15.23,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

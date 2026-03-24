@@ -1,0 +1,15 @@
+[device]
+id = "b2c3d4e5-6f7a-8b9c-0d1e-f2a3b4c5d6e7"
+name = "ELT-2 HP"
+description = "Multi-sensor with 2 external sensor inputs. Internal temperature, humidity, accelerometer and barometric pressure. External inputs support analog 0-10V, digital, pulse counter, DS18B20, ultrasonic distance, and water leak sensors. IP67 rated with external antenna."
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "EU868-1_0_3.toml",
+]
+codec = "elsys.js"
+
+[device.metadata]
+product_url = "https://www.elsys.se/shop/product/elt2hp/"
+documentation_url = "https://elsys.se/public/documents/Sensor_payload.pdf"

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "dl-ctd10",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        7,
+        217,
+        0,
+        3,
+        144,
+        136,
+        128,
+        129,
+        0,
+        100,
+        0,
+        0,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2009,
+        "water_depth": {
+          "displayName": "Water depth",
+          "value": 4232,
+          "unit": "mm"
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 12.9,
+          "unit": "\u00b0C"
+        },
+        "electrical_conductivity": {
+          "displayName": "Electrical conductivity",
+          "value": 100,
+          "unit": "\u00b5S\u22c5cm\u207b\u00b9"
+        },
+        "freezing_flag": {
+          "displayName": "Freezing flag",
+          "value": 0
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-ctd10",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        7,
+        217,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2009,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

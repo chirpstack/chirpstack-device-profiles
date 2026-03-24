@@ -1,0 +1,66 @@
+[
+  {
+    "name": "dl-dlr2-011",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        67,
+        113,
+        0,
+        7,
+        0,
+        1,
+        0,
+        0,
+        10,
+        249
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17265,
+        "ch0_input": {
+          "displayName": "CH0: Input",
+          "value": 1
+        },
+        "ch1_input": {
+          "displayName": "CH1: Input",
+          "value": 0
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.809,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dlr2-011",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        67,
+        113,
+        0,
+        4,
+        10,
+        249
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17265,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.809,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "dl-zn2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        17,
+        17,
+        0,
+        3,
+        64,
+        154,
+        0,
+        134,
+        48,
+        57,
+        0,
+        62,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4369,
+        "dendrometer_a_position": {
+          "displayName": "Dendrometer A Position",
+          "value": 976.9296646118164,
+          "unit": "\u00b5m"
+        },
+        "dendrometer_b_position": {
+          "displayName": "Dendrometer B Position",
+          "value": 11259.996891021729,
+          "unit": "\u00b5m"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

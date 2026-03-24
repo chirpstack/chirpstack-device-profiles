@@ -1,0 +1,77 @@
+[
+  {
+    "name": "dl-tbrg",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        248,
+        0,
+        3,
+        0,
+        4,
+        2,
+        88,
+        64,
+        154,
+        0,
+        0,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 760,
+        "precipitation": {
+          "displayName": "Precipitation",
+          "value": 0.4,
+          "unit": "mm"
+        },
+        "precipitation_interval": {
+          "displayName": "Precipitation interval",
+          "value": 600,
+          "unit": "s"
+        },
+        "cumulative_precipitation": {
+          "displayName": "Cumulative precipitation",
+          "value": 1653.8000000000002,
+          "unit": "mm"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-tbrg",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        248,
+        0,
+        2,
+        12,
+        84
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 760,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.156,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

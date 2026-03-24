@@ -1,0 +1,49 @@
+[
+  {
+    "name": "dl-dlr2-002",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        25,
+        158,
+        0,
+        3,
+        0,
+        0,
+        2,
+        88,
+        0,
+        0,
+        0,
+        0,
+        12,
+        155
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6558,
+        "pulse_count": {
+          "displayName": "Pulse count",
+          "value": 0
+        },
+        "pulse_interval": {
+          "displayName": "Pulse interval",
+          "value": 600,
+          "unit": "s"
+        },
+        "cumulative_pulse_count": {
+          "displayName": "Cumulative pulse count",
+          "value": 0
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.227,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

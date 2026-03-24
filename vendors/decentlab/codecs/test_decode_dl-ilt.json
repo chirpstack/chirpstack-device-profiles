@@ -1,0 +1,61 @@
+[
+  {
+    "name": "dl-ilt",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        86,
+        210,
+        0,
+        3,
+        138,
+        140,
+        12,
+        157
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22226,
+        "leaf_temperature": {
+          "displayName": "Leaf temperature",
+          "value": 27,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.229,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-ilt",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        86,
+        210,
+        0,
+        2,
+        12,
+        157
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22226,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.229,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

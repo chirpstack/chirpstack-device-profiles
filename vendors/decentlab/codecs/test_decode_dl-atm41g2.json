@@ -1,0 +1,167 @@
+[
+  {
+    "name": "dl-atm41g2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        94,
+        248,
+        0,
+        3,
+        128,
+        92,
+        0,
+        0,
+        128,
+        0,
+        128,
+        0,
+        128,
+        52,
+        132,
+        179,
+        128,
+        54,
+        128,
+        231,
+        128,
+        134,
+        166,
+        1,
+        129,
+        214,
+        128,
+        237,
+        129,
+        201,
+        128,
+        159,
+        128,
+        0,
+        17,
+        112,
+        0,
+        1,
+        10,
+        220
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 24312,
+        "solar_radiation": {
+          "displayName": "Solar radiation",
+          "value": 9.2,
+          "unit": "W\u22c5m\u207b\u00b2"
+        },
+        "precipitation": {
+          "displayName": "Precipitation",
+          "value": 0,
+          "unit": "mm"
+        },
+        "lightning_strike_count": {
+          "displayName": "Lightning strike count",
+          "value": 0
+        },
+        "lightning_average_distance": {
+          "displayName": "Lightning average distance",
+          "value": 0,
+          "unit": "km"
+        },
+        "wind_speed": {
+          "displayName": "Wind speed",
+          "value": 0.52,
+          "unit": "m\u22c5s\u207b\u00b9"
+        },
+        "wind_direction": {
+          "displayName": "Wind direction",
+          "value": 120.3,
+          "unit": "\u00b0"
+        },
+        "maximum_wind_speed": {
+          "displayName": "Maximum wind speed",
+          "value": 0.54,
+          "unit": "m\u22c5s\u207b\u00b9"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 23.1,
+          "unit": "\u00b0C"
+        },
+        "vapor_pressure": {
+          "displayName": "Vapor pressure",
+          "value": 1.34,
+          "unit": "kPa"
+        },
+        "barometric_pressure": {
+          "displayName": "Barometric pressure",
+          "value": 97.29,
+          "unit": "kPa"
+        },
+        "relative_humidity": {
+          "displayName": "Relative humidity",
+          "value": 47,
+          "unit": "%"
+        },
+        "internal_temperature": {
+          "displayName": "Internal temperature",
+          "value": 23.7,
+          "unit": "\u00b0C"
+        },
+        "tilt_angle_x_orientation": {
+          "displayName": "Tilt angle, X orientation",
+          "value": 45.7,
+          "unit": "\u00b0"
+        },
+        "tilt_angle_y_orientation": {
+          "displayName": "Tilt angle, Y orientation",
+          "value": 15.9,
+          "unit": "\u00b0"
+        },
+        "precipitation_electrical_conductivity": {
+          "displayName": "Precipitation electrical conductivity",
+          "value": 0,
+          "unit": "\u00b5S\u22c5cm\u207b\u00b9"
+        },
+        "cumulative_precipitation": {
+          "displayName": "Cumulative precipitation",
+          "value": 70,
+          "unit": "mm"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.78,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-atm41g2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        94,
+        248,
+        0,
+        2,
+        10,
+        220
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 24312,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.78,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

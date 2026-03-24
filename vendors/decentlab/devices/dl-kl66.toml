@@ -1,0 +1,18 @@
+[device]
+id = "8ad6b432-2299-426c-ba5c-d7013fdb80c9"
+name = "DL-KL66"
+description = "The Decentlab DL-KL66 is equipped with a vibrating wire that works as a strain/ weight sensor for measuring strain and weight. Suitable for monitoring silo fill level, structural health, weighing, component deformation and strain, and cracks."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-kl66-1538372-464859.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-kl66-1538372-464859.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/strain-/-weight-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-KL66-datasheet.pdf"

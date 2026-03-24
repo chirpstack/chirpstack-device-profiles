@@ -1,0 +1,201 @@
+[
+  {
+    "name": "dl-iam",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        11,
+        189,
+        0,
+        127,
+        11,
+        146,
+        106,
+        81,
+        93,
+        72,
+        188,
+        78,
+        2,
+        98,
+        0,
+        105,
+        129,
+        199,
+        0,
+        0,
+        147,
+        212,
+        0,
+        11,
+        1,
+        17
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 3005,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.962,
+          "unit": "V"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 27.67833981841764,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 36.438544289311054,
+          "unit": "%"
+        },
+        "barometric_pressure": {
+          "displayName": "Barometric pressure",
+          "value": 96412,
+          "unit": "Pa"
+        },
+        "ambient_light_visible_infrared": {
+          "displayName": "Ambient light (visible + infrared)",
+          "value": 610
+        },
+        "ambient_light_infrared": {
+          "displayName": "Ambient light (infrared)",
+          "value": 105
+        },
+        "illuminance": {
+          "displayName": "Illuminance",
+          "value": 678.76512,
+          "unit": "lx"
+        },
+        "co2_concentration": {
+          "displayName": "CO2 concentration",
+          "value": 455,
+          "unit": "ppm"
+        },
+        "co2_sensor_status": {
+          "displayName": "CO2 sensor status",
+          "value": 0
+        },
+        "raw_ir_reading": {
+          "displayName": "Raw IR reading",
+          "value": 37844
+        },
+        "activity_counter": {
+          "displayName": "Activity counter",
+          "value": 11
+        },
+        "total_voc": {
+          "displayName": "Total VOC",
+          "value": 273,
+          "unit": "ppb"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-iam",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        11,
+        189,
+        0,
+        111,
+        11,
+        146,
+        106,
+        81,
+        93,
+        72,
+        188,
+        78,
+        2,
+        98,
+        0,
+        105,
+        0,
+        11,
+        1,
+        17
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 3005,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.962,
+          "unit": "V"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 27.67833981841764,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 36.438544289311054,
+          "unit": "%"
+        },
+        "barometric_pressure": {
+          "displayName": "Barometric pressure",
+          "value": 96412,
+          "unit": "Pa"
+        },
+        "ambient_light_visible_infrared": {
+          "displayName": "Ambient light (visible + infrared)",
+          "value": 610
+        },
+        "ambient_light_infrared": {
+          "displayName": "Ambient light (infrared)",
+          "value": 105
+        },
+        "illuminance": {
+          "displayName": "Illuminance",
+          "value": 678.76512,
+          "unit": "lx"
+        },
+        "activity_counter": {
+          "displayName": "Activity counter",
+          "value": 11
+        },
+        "total_voc": {
+          "displayName": "Total VOC",
+          "value": 273,
+          "unit": "ppb"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-iam",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        11,
+        189,
+        0,
+        1,
+        11,
+        146
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 3005,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.962,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

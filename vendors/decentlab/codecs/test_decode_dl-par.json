@@ -1,0 +1,61 @@
+[
+  {
+    "name": "dl-par",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        145,
+        0,
+        3,
+        128,
+        105,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 657,
+        "photosynthetically_active_radiation": {
+          "displayName": "Photosynthetically active radiation",
+          "value": 48.065185546875,
+          "unit": "\u00b5mol\u22c5m\u207b\u00b2\u22c5s\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-par",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        145,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 657,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

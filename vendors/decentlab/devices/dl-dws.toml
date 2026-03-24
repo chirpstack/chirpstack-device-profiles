@@ -1,0 +1,17 @@
+[device]
+id = "09387cf9-ac3a-4c62-8817-5d86fe76c9e2"
+name = "DL-DWS"
+description = "The Decentlab DL-DWS is a weighing scale for LoRaWAN® that comes with a 'vibrating wire for weight' sensor. Suitable for applications such as logistics, inventory, and weighing."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-dws-232263168-0000302459-1370.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-dws-232263168-0000302459-1370.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/weighing-scale-for-lorawan"

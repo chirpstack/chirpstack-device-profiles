@@ -1,0 +1,61 @@
+[
+  {
+    "name": "dl-ds18",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        61,
+        0,
+        3,
+        129,
+        94,
+        12,
+        21
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 573,
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 21.875,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.093,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-ds18",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        61,
+        0,
+        2,
+        12,
+        21
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 573,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.093,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

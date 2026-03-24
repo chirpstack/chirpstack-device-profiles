@@ -1,0 +1,17 @@
+[device]
+id = "0c99793c-0b43-4157-af2c-4ef0adc25f77"
+name = "DL-GMM"
+description = "The Decentlab DL-GMM includes a Photosynthetically Active Radiation (PAR), temperature, humidity, barometric pressure and CO2 sensors for LoRaWAN®. Suitable for applications such as smart agriculture, greenhouses, grow rooms, and vertical farms."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-gmm.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-gmm.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/greenhouse-multi-monitor-for-lorawan"

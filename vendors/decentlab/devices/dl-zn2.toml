@@ -1,0 +1,17 @@
+[device]
+id = "237b4a73-2608-4aff-9a43-e1af536f4d0b"
+name = "DL-ZN2"
+description = "The Decentlab DL-ZN2 comes with a linear position dendrometer that can measure the growth of plants and trees. It is suitable for use in irrigation control, smart agriculture, forestry, plantation, and ecophysiology."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-zn2.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-zn2.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/dendrometer-for-lorawan"

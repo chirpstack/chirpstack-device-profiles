@@ -1,0 +1,18 @@
+[device]
+id = "b7ff8be5-d3f1-481a-aa81-2121f1a58d04"
+name = "DL-BLG"
+description = "The Decentlab DL-BLG is equipped with a black globe temperature sensor. It is suitable for use in workplace safety, heat stress measurement, WBGT calculation for heat stress and meteorology."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-blg.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-blg.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/black-globe-temperature-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-BLG-datasheet.pdf"

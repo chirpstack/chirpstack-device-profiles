@@ -1,0 +1,156 @@
+[
+  {
+    "name": "dl-isf",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        61,
+        1,
+        0,
+        3,
+        12,
+        41,
+        11,
+        171,
+        12,
+        62,
+        121,
+        112,
+        122,
+        29,
+        120,
+        67,
+        121,
+        145,
+        73,
+        8,
+        69,
+        153,
+        126,
+        76,
+        172,
+        222,
+        170,
+        110,
+        0,
+        0,
+        0,
+        0,
+        69,
+        126,
+        65,
+        90,
+        11,
+        89
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 15617,
+        "sap_flow": {
+          "displayName": "Sap flow",
+          "value": -0.192,
+          "unit": "l\u22c5h\u207b\u00b9"
+        },
+        "heat_velocity_outer": {
+          "displayName": "Heat velocity (outer)",
+          "value": -2.208,
+          "unit": "cm\u22c5h\u207b\u00b9"
+        },
+        "heat_velocity_inner": {
+          "displayName": "Heat velocity (inner)",
+          "value": 0.144,
+          "unit": "cm\u22c5h\u207b\u00b9"
+        },
+        "alpha_outer": {
+          "displayName": "Alpha (outer)",
+          "value": -0.05184
+        },
+        "alpha_inner": {
+          "displayName": "Alpha (inner)",
+          "value": 0.00352
+        },
+        "beta_outer": {
+          "displayName": "Beta (outer)",
+          "value": -0.14816
+        },
+        "beta_inner": {
+          "displayName": "Beta (inner)",
+          "value": -0.04128
+        },
+        "tmax_outer": {
+          "displayName": "Tmax (outer)",
+          "value": 37.392,
+          "unit": "s"
+        },
+        "tmax_inner": {
+          "displayName": "Tmax (inner)",
+          "value": 35.634,
+          "unit": "s"
+        },
+        "temperature_outer": {
+          "displayName": "Temperature (outer)",
+          "value": -4.36,
+          "unit": "\u00b0C"
+        },
+        "max_voltage": {
+          "displayName": "Max voltage",
+          "value": 11.486,
+          "unit": "V"
+        },
+        "min_voltage": {
+          "displayName": "Min voltage",
+          "value": 10.862,
+          "unit": "V"
+        },
+        "diagnostic": {
+          "displayName": "Diagnostic",
+          "value": 0
+        },
+        "upstream_tmax_outer": {
+          "displayName": "Upstream Tmax (outer)",
+          "value": 35.58,
+          "unit": "s"
+        },
+        "upstream_tmax_inner": {
+          "displayName": "Upstream Tmax (inner)",
+          "value": 33.46,
+          "unit": "s"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.905,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-isf",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        61,
+        1,
+        0,
+        2,
+        11,
+        89
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 15617,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.905,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "name": "dl-mes5",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        78,
+        3,
+        0,
+        3,
+        0,
+        0,
+        136,
+        230,
+        33,
+        8,
+        0,
+        242,
+        35,
+        101,
+        10,
+        245
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 19971,
+        "status": {
+          "displayName": "Status",
+          "value": 0
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 22.78,
+          "unit": "\u00b0C"
+        },
+        "sludge_blanket": {
+          "displayName": "Sludge blanket",
+          "value": 84.56,
+          "unit": "%"
+        },
+        "suspended_solid": {
+          "displayName": "Suspended solid",
+          "value": 2.42,
+          "unit": "g\u22c5L\u207b\u00b9"
+        },
+        "turbidity": {
+          "displayName": "Turbidity",
+          "value": 906.1,
+          "unit": "FAU"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.805,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-mes5",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        78,
+        3,
+        0,
+        2,
+        10,
+        245
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 19971,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.805,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "dl-smtp",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        11,
+        80,
+        0,
+        3,
+        9,
+        1,
+        138,
+        140,
+        9,
+        67,
+        138,
+        152,
+        9,
+        39,
+        138,
+        146,
+        11,
+        60,
+        138,
+        165,
+        12,
+        156,
+        138,
+        140,
+        17,
+        224,
+        138,
+        165,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        59
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2896,
+        "soil_moisture_at_depth_0": {
+          "displayName": "Soil moisture at depth 0",
+          "value": -0.39
+        },
+        "soil_temperature_at_depth_0": {
+          "displayName": "Soil temperature at depth 0",
+          "value": 27,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_1": {
+          "displayName": "Soil moisture at depth 1",
+          "value": -0.258
+        },
+        "soil_temperature_at_depth_1": {
+          "displayName": "Soil temperature at depth 1",
+          "value": 27.12,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_2": {
+          "displayName": "Soil moisture at depth 2",
+          "value": -0.314
+        },
+        "soil_temperature_at_depth_2": {
+          "displayName": "Soil temperature at depth 2",
+          "value": 27.06,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_3": {
+          "displayName": "Soil moisture at depth 3",
+          "value": 0.752
+        },
+        "soil_temperature_at_depth_3": {
+          "displayName": "Soil temperature at depth 3",
+          "value": 27.25,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_4": {
+          "displayName": "Soil moisture at depth 4",
+          "value": 1.456
+        },
+        "soil_temperature_at_depth_4": {
+          "displayName": "Soil temperature at depth 4",
+          "value": 27,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_5": {
+          "displayName": "Soil moisture at depth 5",
+          "value": 4.152
+        },
+        "soil_temperature_at_depth_5": {
+          "displayName": "Soil temperature at depth 5",
+          "value": 27.25,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_6": {
+          "displayName": "Soil moisture at depth 6",
+          "value": -5
+        },
+        "soil_temperature_at_depth_6": {
+          "displayName": "Soil temperature at depth 6",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "soil_moisture_at_depth_7": {
+          "displayName": "Soil moisture at depth 7",
+          "value": -5
+        },
+        "soil_temperature_at_depth_7": {
+          "displayName": "Soil temperature at depth 7",
+          "value": -327.68,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.875,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-smtp",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        11,
+        80,
+        0,
+        2,
+        11,
+        59
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2896,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.875,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "name": "dl-dlr2-010",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        25,
+        143,
+        0,
+        7,
+        0,
+        4,
+        2,
+        88,
+        11,
+        240,
+        0,
+        1,
+        0,
+        0,
+        2,
+        88,
+        222,
+        206,
+        0,
+        0,
+        12,
+        51
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6543,
+        "ch0_pulse_count": {
+          "displayName": "CH0: Pulse count",
+          "value": 4
+        },
+        "ch0_pulse_interval": {
+          "displayName": "CH0: Pulse interval",
+          "value": 600,
+          "unit": "s"
+        },
+        "ch0_cumulative_pulse_count": {
+          "displayName": "CH0: Cumulative pulse count",
+          "value": 68592
+        },
+        "ch1_pulse_count": {
+          "displayName": "CH1: Pulse count",
+          "value": 0
+        },
+        "ch1_pulse_interval": {
+          "displayName": "CH1: Pulse interval",
+          "value": 600,
+          "unit": "s"
+        },
+        "ch1_cumulative_pulse_count": {
+          "displayName": "CH1: Cumulative pulse count",
+          "value": 57038
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.123,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dlr2-010",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        25,
+        143,
+        0,
+        4,
+        12,
+        51
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6543,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.123,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

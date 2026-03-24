@@ -1,0 +1,87 @@
+[
+  {
+    "name": "dl-pheht",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        82,
+        184,
+        0,
+        3,
+        0,
+        0,
+        136,
+        66,
+        130,
+        199,
+        127,
+        99,
+        127,
+        246,
+        12,
+        92
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21176,
+        "status": {
+          "displayName": "Status",
+          "value": 0
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 21.14,
+          "unit": "\u00b0C"
+        },
+        "ph": {
+          "displayName": "pH",
+          "value": 7.11
+        },
+        "redox": {
+          "displayName": "Redox",
+          "value": -15.7,
+          "unit": "mV"
+        },
+        "ph_mv": {
+          "displayName": "pH-mV",
+          "value": -1,
+          "unit": "mV"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.164,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-pheht",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        82,
+        184,
+        0,
+        2,
+        12,
+        92
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 21176,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.164,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

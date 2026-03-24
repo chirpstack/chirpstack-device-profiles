@@ -1,0 +1,68 @@
+[
+  {
+    "name": "dl-trs21",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        146,
+        0,
+        3,
+        0,
+        117,
+        128,
+        161,
+        12,
+        37
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 402,
+        "water_potential": {
+          "displayName": "Water potential",
+          "value": -11.7,
+          "unit": "kPa"
+        },
+        "soil_temperature": {
+          "displayName": "Soil temperature",
+          "value": 16.1,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.109,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-trs21",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        146,
+        0,
+        2,
+        12,
+        37
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 402,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.109,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

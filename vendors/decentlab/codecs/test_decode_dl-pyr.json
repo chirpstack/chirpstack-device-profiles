@@ -1,0 +1,61 @@
+[
+  {
+    "name": "dl-pyr",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        145,
+        0,
+        3,
+        128,
+        105,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 657,
+        "total_solar_radiation": {
+          "displayName": "Total solar radiation",
+          "value": 48.065185546875,
+          "unit": "W\u22c5m\u207b\u00b2"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-pyr",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        145,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 657,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

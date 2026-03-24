@@ -1,0 +1,79 @@
+[
+  {
+    "name": "dl-trs12",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        16,
+        211,
+        0,
+        3,
+        70,
+        190,
+        129,
+        61,
+        0,
+        0,
+        12,
+        128
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4307,
+        "dielectric_permittivity": {
+          "displayName": "Dielectric permittivity",
+          "value": 1.1831248966814998
+        },
+        "volumetric_water_content": {
+          "displayName": "Volumetric water content",
+          "value": 0.006886900000000029,
+          "unit": "m\u00b3\u22c5m\u207b\u00b3"
+        },
+        "soil_temperature": {
+          "displayName": "Soil temperature",
+          "value": 31.7,
+          "unit": "\u00b0C"
+        },
+        "electrical_conductivity": {
+          "displayName": "Electrical conductivity",
+          "value": 0,
+          "unit": "\u00b5S\u22c5cm\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.2,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-trs12",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        16,
+        211,
+        0,
+        2,
+        12,
+        128
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4307,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.2,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

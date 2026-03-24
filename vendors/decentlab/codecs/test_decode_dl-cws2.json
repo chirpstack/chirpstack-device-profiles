@@ -1,0 +1,110 @@
+[
+  {
+    "name": "dl-cws2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        88,
+        192,
+        0,
+        7,
+        70,
+        118,
+        250,
+        10,
+        129,
+        201,
+        129,
+        63,
+        166,
+        216,
+        129,
+        55,
+        128,
+        37,
+        129,
+        48,
+        11,
+        145
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22720,
+        "air_temperature_radiation_shield": {
+          "displayName": "Air temperature (radiation shield)",
+          "value": 3.167391470206759,
+          "unit": "\u00b0C"
+        },
+        "air_humidity_radiation_shield": {
+          "displayName": "Air humidity (radiation shield)",
+          "value": 97.67299916075379,
+          "unit": "%"
+        },
+        "surface_temperature": {
+          "displayName": "Surface temperature",
+          "value": 4.57,
+          "unit": "\u00b0C"
+        },
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 3.19,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 99.44,
+          "unit": "%"
+        },
+        "dew_point": {
+          "displayName": "Dew point",
+          "value": 3.11,
+          "unit": "\u00b0C"
+        },
+        "angle": {
+          "displayName": "Angle",
+          "value": 37,
+          "unit": "\u00b0"
+        },
+        "sensor_temperature": {
+          "displayName": "Sensor temperature",
+          "value": 3.04,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.961,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-cws2",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        88,
+        192,
+        0,
+        4,
+        11,
+        145
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22720,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.961,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

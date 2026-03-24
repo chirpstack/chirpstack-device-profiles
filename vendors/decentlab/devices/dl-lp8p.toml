@@ -1,0 +1,18 @@
+[device]
+id = "b1799a7e-b71f-4df9-8875-8eb1d0752675"
+name = "DL-LP8P"
+description = "The Decentlab DL-LP8P is a LoRaWAN® end device equipped with CO₂, temperature, humidity, and barometric pressure sensors. Suitable for applications such as goods and storage condition monitoring, indoor and outdoor air quality, building automation, energy-saving, and smart agriculture."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-lp8p.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-lp8p.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/co2-temperature-humidity-and-barometric-pressure-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-LP8P-datasheet.pdf"

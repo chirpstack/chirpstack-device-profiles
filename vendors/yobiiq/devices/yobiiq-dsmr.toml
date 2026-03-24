@@ -1,0 +1,13 @@
+[device]
+id = "6714f4f8-7ec6-44ae-912c-d9dd6252ae66"
+name = "YOBIIQ DSMR"
+description = "The YOBIIQ DSMR reads the data output of a Smart Meter utilizing the DSMR protocol."
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classC.toml"]
+codec = "dsmr.js"
+
+[device.metadata]
+product_url = "https://yobiiq.com/products/dsmr-smart-metering/"
+documentation_url = "https://yobiiq.com/products/dsmr-smart-metering/"

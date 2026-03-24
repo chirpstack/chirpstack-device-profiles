@@ -1,0 +1,174 @@
+[
+  {
+    "name": "dl-sdd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        67,
+        227,
+        0,
+        5,
+        128,
+        0,
+        128,
+        0,
+        128,
+        0,
+        128,
+        0,
+        128,
+        0,
+        128,
+        0,
+        135,
+        65,
+        135,
+        123,
+        135,
+        73,
+        135,
+        108,
+        135,
+        108,
+        135,
+        102,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        74,
+        9,
+        227
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17379,
+        "moisture_at_level_0": {
+          "displayName": "Moisture at level 0",
+          "value": 0,
+          "unit": "%"
+        },
+        "moisture_at_level_1": {
+          "displayName": "Moisture at level 1",
+          "value": 0,
+          "unit": "%"
+        },
+        "moisture_at_level_2": {
+          "displayName": "Moisture at level 2",
+          "value": 0,
+          "unit": "%"
+        },
+        "moisture_at_level_3": {
+          "displayName": "Moisture at level 3",
+          "value": 0,
+          "unit": "%"
+        },
+        "moisture_at_level_4": {
+          "displayName": "Moisture at level 4",
+          "value": 0,
+          "unit": "%"
+        },
+        "moisture_at_level_5": {
+          "displayName": "Moisture at level 5",
+          "value": 0,
+          "unit": "%"
+        },
+        "temperature_at_level_0": {
+          "displayName": "Temperature at level 0",
+          "value": 18.57,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_1": {
+          "displayName": "Temperature at level 1",
+          "value": 19.15,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_2": {
+          "displayName": "Temperature at level 2",
+          "value": 18.65,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_3": {
+          "displayName": "Temperature at level 3",
+          "value": 19,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_4": {
+          "displayName": "Temperature at level 4",
+          "value": 19,
+          "unit": "\u00b0C"
+        },
+        "temperature_at_level_5": {
+          "displayName": "Temperature at level 5",
+          "value": 18.94,
+          "unit": "\u00b0C"
+        },
+        "salinity_at_level_0": {
+          "displayName": "Salinity at level 0",
+          "value": -100
+        },
+        "salinity_at_level_1": {
+          "displayName": "Salinity at level 1",
+          "value": -100
+        },
+        "salinity_at_level_2": {
+          "displayName": "Salinity at level 2",
+          "value": -100
+        },
+        "salinity_at_level_3": {
+          "displayName": "Salinity at level 3",
+          "value": -100
+        },
+        "salinity_at_level_4": {
+          "displayName": "Salinity at level 4",
+          "value": -100
+        },
+        "salinity_at_level_5": {
+          "displayName": "Salinity at level 5",
+          "value": 230
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.531,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-sdd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        67,
+        227,
+        0,
+        4,
+        9,
+        227
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 17379,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.531,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "name": "dl-dlr2-005",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        17,
+        58,
+        0,
+        3,
+        197,
+        85,
+        0,
+        216,
+        12,
+        109
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4410,
+        "voltage": {
+          "displayName": "Voltage",
+          "value": 2.0805662870407104,
+          "unit": "V"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.181,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dlr2-005",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        17,
+        58,
+        0,
+        2,
+        12,
+        109
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4410,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.181,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

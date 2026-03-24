@@ -1,0 +1,99 @@
+[
+	{
+		"description": "Config downlink (default fPort 50)",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"Config": [
+					{ "Param": "adr", "Value": 1 },
+					{ "Param": "linkCheckTimeframe", "Value": 300 }
+				]
+			}
+		},
+		"expected": {
+			"bytes": [255, 160, 1, 255, 165, 1, 44],
+			"fPort": 50,
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "Config downlink with HEX register",
+		"input": {
+			"data": {
+				"Type": "Config",
+				"fPort": 50,
+				"Config": [
+					{ "Param": "decryptionKey", "Value": "00112233445566778899AABBCCDDEEFF" }
+				]
+			}
+		},
+		"expected": {
+			"bytes": [255, 221, 0, 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255],
+			"fPort": 50,
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "Periodic uplink configuration (fPort 2)",
+		"input": {
+			"data": {
+				"Type": "Periodic",
+				"fPort": 2,
+				"Periodic": {
+					"UplinkInterval": 600,
+					"Mode": 1,
+					"Status": 1,
+					"Registers": ["electricityDeliveredToClient", "voltageL1"]
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 20, 2, 88, 255, 21, 1, 255, 22, 1, 255, 23, 19, 37],
+			"fPort": 2,
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "Threshold configuration (fPort 11)",
+		"input": {
+			"data": {
+				"Type": "Threshold",
+				"fPort": 11,
+				"Threshold": {
+					"Register": "electricityPowerDelivered",
+					"Operation": ["MIN", "MAX"],
+					"MinThreshold": 1000,
+					"MaxThreshold": 2000,
+					"LogInterval": 60,
+					"UplinkInterval": 120,
+					"UplinkMode": 1
+				}
+			}
+		},
+		"expected": {
+			"bytes": [255, 64, 26, 255, 69, 0, 60, 255, 65, 3, 255, 66, 0, 0, 3, 232, 255, 67, 0, 0, 7, 208, 255, 70, 0, 120, 255, 71, 1],
+			"fPort": 11,
+			"errors": [],
+			"warnings": []
+		}
+	},
+	{
+		"description": "Parameter reading request (fPort 100)",
+		"input": {
+			"data": {
+				"Type": "Reading",
+				"fPort": 100,
+				"Reading": ["deviceStatus", "electricityDeliveredToClient", "voltageL1"]
+			}
+		},
+		"expected": {
+			"bytes": [255, 204, 100, 19, 37],
+			"fPort": 100,
+			"errors": [],
+			"warnings": []
+		}
+	}
+]

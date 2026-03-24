@@ -1,0 +1,68 @@
+[
+  {
+    "name": "dl-pr21",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        103,
+        0,
+        3,
+        78,
+        128,
+        96,
+        23,
+        12,
+        127
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 359,
+        "pressure": {
+          "displayName": "Pressure",
+          "value": 0.24609375,
+          "unit": "bar"
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 25.671875,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.199,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-pr21",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        1,
+        103,
+        0,
+        2,
+        12,
+        127
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 359,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.199,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[device]
+id = "339170b7-51ae-49f8-8cda-ce9b5c1a83e4"
+name = "DL-CWS"
+description = "The Decentlab DL-CWS includes a high-precision infrared pyrometer, temperature, humidity and dew point sensors. It is suitable for use in road weather information systems, winter road maintenance, frost alarming, ice alerting, and smart agriculture."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-cws.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-cws.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/high-precision-winter-road-maintenance-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-CWS-datasheet.pdf"

@@ -1,0 +1,61 @@
+[
+  {
+    "name": "dl-ifd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        86,
+        220,
+        0,
+        3,
+        2,
+        188,
+        12,
+        72
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22236,
+        "fruit_size": {
+          "displayName": "Fruit size",
+          "value": 7,
+          "unit": "mm"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.144,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-ifd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        86,
+        220,
+        0,
+        2,
+        12,
+        72
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22236,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.144,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

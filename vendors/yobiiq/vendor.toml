@@ -1,0 +1,8 @@
+[vendor]
+id = "dac78711-5cc1-4682-99bc-e8088a555528"
+name = "YOBIIQ"
+vendor_id = 415
+ouis = ["FC48C9"]
+
+[vendor.metadata]
+homepage = "https://www.yobiiq.com"

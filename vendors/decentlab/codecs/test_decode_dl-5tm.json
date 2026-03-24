@@ -1,0 +1,72 @@
+[
+  {
+    "name": "dl-5tm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        59,
+        0,
+        3,
+        0,
+        55,
+        2,
+        113,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 571,
+        "dielectric_permittivity": {
+          "displayName": "Dielectric permittivity",
+          "value": 1.1
+        },
+        "volumetric_water_content": {
+          "displayName": "Volumetric water content",
+          "value": -0.0215397767,
+          "unit": "m\u00b3\u22c5m\u207b\u00b3"
+        },
+        "soil_temperature": {
+          "displayName": "Soil temperature",
+          "value": 22.5,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-5tm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        2,
+        59,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 571,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

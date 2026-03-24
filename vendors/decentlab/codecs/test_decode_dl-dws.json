@@ -1,0 +1,70 @@
+[
+  {
+    "name": "dl-dws",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        212,
+        0,
+        3,
+        59,
+        246,
+        127,
+        255,
+        59,
+        246,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 980,
+        "frequency": {
+          "displayName": "Frequency",
+          "value": 15350.468459120457,
+          "unit": "Hz"
+        },
+        "weight": {
+          "displayName": "Weight",
+          "value": 2390.4101368512333,
+          "unit": "g"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dws",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        212,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 980,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

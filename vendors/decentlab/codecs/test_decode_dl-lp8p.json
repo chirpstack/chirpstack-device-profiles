@@ -1,0 +1,189 @@
+[
+  {
+    "name": "dl-lp8p",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        5,
+        120,
+        0,
+        15,
+        103,
+        189,
+        97,
+        141,
+        28,
+        237,
+        189,
+        16,
+        129,
+        217,
+        129,
+        244,
+        137,
+        91,
+        11,
+        216,
+        11,
+        181,
+        0,
+        0,
+        149,
+        152,
+        149,
+        57,
+        12,
+        37
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 1400,
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 24.35660461425781,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 41.63221740722656,
+          "unit": "%"
+        },
+        "barometer_temperature": {
+          "displayName": "Barometer temperature",
+          "value": 24.05,
+          "unit": "\u00b0C"
+        },
+        "barometric_pressure": {
+          "displayName": "Barometric pressure",
+          "value": 96800,
+          "unit": "Pa"
+        },
+        "co2_concentration": {
+          "displayName": "CO2 concentration",
+          "value": 473,
+          "unit": "ppm"
+        },
+        "co2_concentration_lpf": {
+          "displayName": "CO2 concentration LPF",
+          "value": 500,
+          "unit": "ppm"
+        },
+        "co2_sensor_temperature": {
+          "displayName": "CO2 sensor temperature",
+          "value": 23.95,
+          "unit": "\u00b0C"
+        },
+        "capacitor_voltage_1": {
+          "displayName": "Capacitor voltage 1",
+          "value": 3.032,
+          "unit": "V"
+        },
+        "capacitor_voltage_2": {
+          "displayName": "Capacitor voltage 2",
+          "value": 2.997,
+          "unit": "V"
+        },
+        "co2_sensor_status": {
+          "displayName": "CO2 sensor status",
+          "value": 0
+        },
+        "raw_ir_reading": {
+          "displayName": "Raw IR reading",
+          "value": 38296
+        },
+        "raw_ir_reading_lpf": {
+          "displayName": "Raw IR reading LPF",
+          "value": 38201
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.109,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-lp8p",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        5,
+        120,
+        0,
+        11,
+        103,
+        189,
+        97,
+        141,
+        28,
+        237,
+        189,
+        16,
+        12,
+        37
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 1400,
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 24.35660461425781,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 41.63221740722656,
+          "unit": "%"
+        },
+        "barometer_temperature": {
+          "displayName": "Barometer temperature",
+          "value": 24.05,
+          "unit": "\u00b0C"
+        },
+        "barometric_pressure": {
+          "displayName": "Barometric pressure",
+          "value": 96800,
+          "unit": "Pa"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.109,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-lp8p",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        5,
+        120,
+        0,
+        8,
+        12,
+        37
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 1400,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.109,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

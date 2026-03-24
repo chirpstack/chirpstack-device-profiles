@@ -1,0 +1,81 @@
+[
+  {
+    "name": "dl-rad",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        88,
+        107,
+        0,
+        3,
+        7,
+        76,
+        136,
+        182,
+        138,
+        140,
+        0,
+        0,
+        11,
+        147
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22635,
+        "distance": {
+          "displayName": "Distance",
+          "value": 1868,
+          "unit": "mm"
+        },
+        "temperature": {
+          "displayName": "Temperature",
+          "value": 22.3,
+          "unit": "\u00b0C"
+        },
+        "reliability": {
+          "displayName": "Reliability",
+          "value": 27,
+          "unit": "dB"
+        },
+        "status": {
+          "displayName": "Status",
+          "value": 0
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.963,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-rad",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        88,
+        107,
+        0,
+        2,
+        11,
+        147
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 22635,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 2.963,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

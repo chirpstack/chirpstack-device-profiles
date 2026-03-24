@@ -1,0 +1,13 @@
+[device]
+id = "995ec891-4630-4799-a7c9-45091c1afc63"
+name = "YOBIIQ EM4301"
+description = "EM4301 is a 3phase Electricity Meter for direct connection"
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classC.toml"]
+codec = "em4301.js"
+
+[device.metadata]
+product_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-electricity-meter/"
+documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em4301-electricity-meter/"

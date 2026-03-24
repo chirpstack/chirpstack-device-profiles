@@ -1,0 +1,63 @@
+[
+  {
+    "name": "dl-dlr2-012",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        23,
+        131,
+        0,
+        3,
+        22,
+        46,
+        0,
+        135,
+        12,
+        51
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6019,
+        "strain_gauge": {
+          "displayName": "Strain gauge",
+          "value": 1713.0065082323433,
+          "unit": "\u00b5m\u22c5m\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.123,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-dlr2-012",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        23,
+        131,
+        0,
+        2,
+        12,
+        51
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6019,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.123,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

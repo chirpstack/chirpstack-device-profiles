@@ -1,0 +1,18 @@
+[device]
+id = "dcc68024-c0ca-47bb-999d-84daa3ca1d5d"
+name = "DL-PR36"
+description = "The Decentlab DL-PR36 is a LoRaWAN® end-device that is equipped with a high precision pressure/liquid level sensor and a temperature sensor. Suitable for measuring water/liquid levels in tanks, wells, boreholes, groundwater, etc."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-pr36-8192.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-pr36-8192.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/high-precision-pressure-/-liquid-level-and-temperature-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-PR36-datasheet.pdf"

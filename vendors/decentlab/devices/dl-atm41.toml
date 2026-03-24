@@ -1,0 +1,18 @@
+[device]
+id = "bed3876e-02c2-4e6e-9849-17f31fb13082"
+name = "DL-ATM41"
+description = "The Decentlab DL-ATM41 consists of solar radiation, precipitation, vapor pressure, barometric pressure, humidity, temperature, horizontal wind speed, wind gust, wind direction, tilt, and lighting sensors. It is suitable for smart agriculture, urban heat islands, frost alarming, microclimate, and building automation."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-atm41.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-atm41.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/eleven-parameter-weather-station-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-ATM41-datasheet.pdf"

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Set period 3600 seconds and save",
+    "input": {
+      "data": {
+        "command": "set period + save",
+        "parameter": 3600
+      }
+    },
+    "expected": {
+      "fPort": 1,
+      "bytes": [0, 2, 14, 16, 72, 164]
+    }
+  },
+  {
+    "name": "Set ADR off",
+    "input": {
+      "data": {
+        "command": "set adr off"
+      }
+    },
+    "expected": {
+      "fPort": 1,
+      "bytes": [0, 7, 0, 0, 229, 177]
+    }
+  }
+]

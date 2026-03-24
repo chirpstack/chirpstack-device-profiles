@@ -1,0 +1,18 @@
+[device]
+id = "f94fa5ad-71fe-4789-b16f-d9dc567e28bb"
+name = "DL-ITST"
+description = "The Decentlab DL-ITST is equipped with an infrared pyrometer (thermometer) for measuring surface temperature. Ideal for road surface monitoring, ice warning, and smart agriculture."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-itst.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-itst.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/infrared-thermometer-/-surface-temperature-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-ITST-datasheet.pdf"

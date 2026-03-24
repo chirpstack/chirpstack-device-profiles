@@ -1,0 +1,17 @@
+[device]
+id = "636bfb4f-f842-4ac5-895d-ccaa81d72215"
+name = "DL-DLR2-005"
+description = "The Decentlab DL-DLR2-005 is an Analog or Digital Sensor Device for LoRaWAN® that consists of an Analog 0 … 3 V  Sensor."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-dlr2-005.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-dlr2-005.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/analog-or-digital-sensor-device-for-lorawan"

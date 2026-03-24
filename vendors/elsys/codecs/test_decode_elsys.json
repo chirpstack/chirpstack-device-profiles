@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Test decode temperature and humidity",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 0, 234, 2, 55]
+    },
+    "expected": {
+      "data": {
+        "temperature": 23.4,
+        "humidity": 55
+      }
+    }
+  },
+  {
+    "name": "Test decode temperature, humidity and VDD",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 0, 198, 2, 42, 7, 14, 10]
+    },
+    "expected": {
+      "data": {
+        "temperature": 19.8,
+        "humidity": 42,
+        "vdd": 3594
+      }
+    }
+  },
+  {
+    "name": "Test decode negative temperature",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 255, 206, 2, 80]
+    },
+    "expected": {
+      "data": {
+        "temperature": -5.0,
+        "humidity": 80
+      }
+    }
+  },
+  {
+    "name": "Test decode external temperature (DS18B20)",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 0, 200, 12, 0, 150]
+    },
+    "expected": {
+      "data": {
+        "temperature": 20.0,
+        "externalTemperature": 15.0
+      }
+    }
+  },
+  {
+    "name": "Test decode analog input",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 0, 180, 8, 19, 136]
+    },
+    "expected": {
+      "data": {
+        "temperature": 18.0,
+        "analog1": 5000
+      }
+    }
+  },
+  {
+    "name": "Test decode pressure",
+    "input": {
+      "fPort": 5,
+      "bytes": [20, 0, 15, 92, 168]
+    },
+    "expected": {
+      "data": {
+        "pressure": 1006.76
+      }
+    }
+  },
+  {
+    "name": "Test decode digital input",
+    "input": {
+      "fPort": 5,
+      "bytes": [1, 0, 210, 13, 1]
+    },
+    "expected": {
+      "data": {
+        "temperature": 21.0,
+        "digital": 1
+      }
+    }
+  },
+  {
+    "name": "Test decode pulse counter",
+    "input": {
+      "fPort": 5,
+      "bytes": [10, 0, 42]
+    },
+    "expected": {
+      "data": {
+        "pulse1": 42
+      }
+    }
+  }
+]

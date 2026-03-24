@@ -1,0 +1,18 @@
+[device]
+id = "8460c74e-4f83-4c11-93b9-0ede46c35c3f"
+name = "DL-NTU"
+description = "The Decentlab DL-NTU is equipped with optical infrared turbidity and temperature sensors for water quality monitoring."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-ntu.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-ntu.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/optical-turbidity-and-temperature-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-NTU-datasheet.pdf"

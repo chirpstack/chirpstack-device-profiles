@@ -1,0 +1,82 @@
+[
+  {
+    "name": "dl-wrm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        26,
+        16,
+        0,
+        7,
+        100,
+        160,
+        121,
+        177,
+        4,
+        249,
+        4,
+        196,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6672,
+        "air_temperature": {
+          "displayName": "Air temperature",
+          "value": 23.787670710307466,
+          "unit": "\u00b0C"
+        },
+        "air_humidity": {
+          "displayName": "Air humidity",
+          "value": 47.536430914778364,
+          "unit": "%"
+        },
+        "surface_temperature": {
+          "displayName": "Surface temperature",
+          "value": 27.3,
+          "unit": "\u00b0C"
+        },
+        "head_temperature": {
+          "displayName": "Head temperature",
+          "value": 22,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-wrm",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        26,
+        16,
+        0,
+        4,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6672,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[device]
+id = "ad27c7f4-6cca-4f59-8b34-5c45df9ac4c2"
+name = "DL-IAM"
+description = "The DL-IAM from the Decentlab is a LoRaWAN® end device that consists of a CO2 sensor, TVOC sensor, temperature sensor, humidity sensor, barometric pressure sensor, ambient light intensity sensor, and PIR motion sensor. Suitable for building automation, activity and visitor frequency monitoring, energy and HVAC optimization, shop and workplace comfort enhancement."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-iam.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-iam.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/indoor-ambiance-monitor-including-co2-tvoc-and-motion-sensor-for-lorawan"
+documentation_url = "https://cdn.decentlab.com/download/datasheets/Decentlab-DL-IAM-datasheet.pdf"

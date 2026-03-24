@@ -1,0 +1,13 @@
+[device]
+id = "09b110be-91d1-420e-8134-b37e630235bb"
+name = "YOBIIQ EM2101"
+description = "EM2101 is a 1phase Electricity Meter with built in relay"
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-classC.toml"]
+codec = "em2101.js"
+
+[device.metadata]
+product_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"
+documentation_url = "https://yobiiq.com/products/electricity-meters/iq-em2101-electricity-meter/"

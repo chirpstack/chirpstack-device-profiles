@@ -1,0 +1,82 @@
+[
+  {
+    "name": "dl-pr36ctd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        10,
+        23,
+        0,
+        3,
+        128,
+        7,
+        151,
+        134,
+        151,
+        129,
+        128,
+        6,
+        12,
+        43
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2583,
+        "pressure": {
+          "displayName": "Pressure",
+          "value": 0.0008544921875,
+          "unit": "bar"
+        },
+        "temperature_electronics": {
+          "displayName": "Temperature (electronics)",
+          "value": 23.5234375,
+          "unit": "\u00b0C"
+        },
+        "temperature_pt1000": {
+          "displayName": "Temperature (PT1000)",
+          "value": 23.50390625,
+          "unit": "\u00b0C"
+        },
+        "electrical_conductivity": {
+          "displayName": "Electrical conductivity",
+          "value": 0.005859375,
+          "unit": "mS\u22c5cm\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.115,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-pr36ctd",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        10,
+        23,
+        0,
+        2,
+        12,
+        43
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 2583,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.115,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

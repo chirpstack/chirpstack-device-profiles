@@ -1,0 +1,46 @@
+[
+  {
+    "name": "dl-trs11",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        16,
+        213,
+        0,
+        3,
+        70,
+        63,
+        129,
+        11,
+        12,
+        121
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 4309,
+        "dielectric_permittivity": {
+          "displayName": "Dielectric permittivity",
+          "value": 1.0259018697121183
+        },
+        "volumetric_water_content": {
+          "displayName": "Volumetric water content",
+          "value": 0.0019605699999999393,
+          "unit": "m\u00b3\u22c5m\u207b\u00b3"
+        },
+        "soil_temperature": {
+          "displayName": "Soil temperature",
+          "value": 26.7,
+          "unit": "\u00b0C"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.193,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

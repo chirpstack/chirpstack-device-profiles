@@ -1,0 +1,17 @@
+[device]
+id = "b2add6e4-2988-4f59-9a8b-b389ecc279ba"
+name = "DL-LPW"
+description = "The Decentlab DL-LPW is a linear position sensor for LoRaWAN®. Suitable for applications such as crack measurements, displacement monitoring, terrain changes, environmental changes, structural health monitoring, and bearings."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-lpw.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-lpw.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/linear-position-/-way-for-lorawan"

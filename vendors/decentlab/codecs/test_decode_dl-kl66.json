@@ -1,0 +1,88 @@
+[
+  {
+    "name": "dl-kl66",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        212,
+        0,
+        3,
+        59,
+        246,
+        127,
+        255,
+        59,
+        246,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 980,
+        "counter_reading": {
+          "displayName": "Counter reading",
+          "value": 15350
+        },
+        "measurement_interval": {
+          "displayName": "Measurement interval",
+          "value": 0.999969482421875
+        },
+        "frequency": {
+          "displayName": "Frequency",
+          "value": 15350.468459120457,
+          "unit": "Hz"
+        },
+        "weight": {
+          "displayName": "Weight",
+          "value": -47.5066896399347,
+          "unit": "g"
+        },
+        "elongation": {
+          "displayName": "Elongation",
+          "value": 0.6988257799379214,
+          "unit": "\u00b5m"
+        },
+        "strain": {
+          "displayName": "Strain",
+          "value": 10.588269392998809,
+          "unit": "\u00b5m\u22c5m\u207b\u00b9"
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  },
+  {
+    "name": "dl-kl66",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        3,
+        212,
+        0,
+        2,
+        12,
+        96
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 980,
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.168,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "dl-dlr2-003",
+    "input": {
+      "fPort": 1,
+      "bytes": [
+        2,
+        25,
+        155,
+        0,
+        3,
+        0,
+        1,
+        12,
+        141
+      ]
+    },
+    "expected": {
+      "data": {
+        "protocol_version": 2,
+        "device_id": 6555,
+        "input": {
+          "displayName": "Input",
+          "value": 1
+        },
+        "battery_voltage": {
+          "displayName": "Battery voltage",
+          "value": 3.213,
+          "unit": "V"
+        }
+      }
+    }
+  }
+]

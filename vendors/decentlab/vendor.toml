@@ -1,0 +1,8 @@
+[vendor]
+id = "9394f76a-723b-4a7e-9e78-ed33fac7cad7"
+name = "Decentlab"
+vendor_id = 109
+ouis = ["70B3D57BA"]
+
+[vendor.metadata]
+homepage = "https://www.decentlab.com"

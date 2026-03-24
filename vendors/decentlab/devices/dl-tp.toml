@@ -1,0 +1,17 @@
+[device]
+id = "63d49f78-4f14-4b08-a625-449b59404f83"
+name = "DL-TP"
+description = "The Decentlab DL-TP comes with temperature profiling sensors that can be used in monitoring of glaciers, lakes, ocean, permafrost, dike, dam and soils."
+
+[[device.firmware]]
+version = "1.6.7"
+profiles = ["EU868-1_0_2.toml", "AU915-1_0_1.toml", "US915-1_0_2.toml", "AS923_3-1_0_2.toml", "AS923-1_0_2.toml"]
+codec = "dl-tp.js"
+
+[[device.firmware]]
+version = "3.0.0"
+profiles = ["EU868-1_0_4.toml", "IN865-1_0_4.toml", "AS923_3-1_0_4.toml", "AS923-1_0_4.toml", "AU915-1_0_4.toml", "US915-1_0_4.toml"]
+codec = "dl-tp.js"
+
+[device.metadata]
+product_url = "https://www.decentlab.com/products/temperature-profile-for-lorawan"
