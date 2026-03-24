@@ -4,14 +4,17 @@ name = "Milesight"
 vendor_id = 601
 ouis = ["24e124"]
 devices = [
+    "milesight-am102-l.toml",
+    "milesight-am102.toml",
+    "milesight-em300-cl.toml",
     "milesight-em300-di.toml",
     "milesight-em300-mcs.toml",
-    "milesight-em300-th.toml",
-    "milesight-em300-cl.toml",
     "milesight-em300-mld.toml",
     "milesight-em300-sld-zld.toml",
+    "milesight-em300-th.toml",
     "milesight-em310-tilt.toml",
     "milesight-em320-th.toml",
+    "milesight-em400-tld.toml",
 ]
 
 [vendor.metadata]
