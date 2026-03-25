@@ -1,0 +1,18 @@
+[device]
+id = "f2b69399-969c-45e6-bef4-898e74332fd2"
+name = "LW005-MP"
+description = "Smart plug with power and energy monitoring"
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "EU868-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "AS923-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "lw005-mp.js"
+
+[device.metadata]
+product_url = "https://www.mokosmart.com/lorawan-meter-plug-lw005-mp/"
+documentation_url = "https://www.mokosmart.com/lorawan-meter-plug-lw005-mp/"
