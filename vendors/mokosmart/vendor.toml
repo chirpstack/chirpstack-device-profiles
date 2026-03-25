@@ -1,0 +1,11 @@
+[vendor]
+id = "7af20d70-8b33-4eec-8d9d-d0c96c3b1863"
+name = "MOKOSmart"
+vendor_id = 786
+ouis = []
+devices = [
+    "lw005-mp.toml",
+]
+
+[vendor.metadata]
+homepage = "https://www.mokosmart.com/"
