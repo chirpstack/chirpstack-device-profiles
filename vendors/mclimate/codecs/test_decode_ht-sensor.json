@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Test decode",
+    "input": {
+      "bytes": [0x01, 0x02, 0x74, 0x73, 0xF1, 0x04, 0x00]
+    },
+    "expected": {
+      "data": {
+        "sensorTemperature": 22.8,
+        "relativeHumidity": 44.92,
+        "batteryVoltage": 3.5,
+        "thermistorProperlyConnected": false,
+        "extThermistorTemperature": 0
+      }
+    }
+  }
+]

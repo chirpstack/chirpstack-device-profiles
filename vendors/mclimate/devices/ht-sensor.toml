@@ -1,0 +1,13 @@
+[device]
+id = "f241cd5f-5b3b-46a1-bb01-9bd10a90cb09"
+name = "Humidity and Temperature Sensor"
+description = "The MClimate HT LoRaWAN® Sensor is an indoor temperature and humidity sensor with 10+ years of battery life ideal for monitoring environments in residential and commercial buildings."
+
+[[device.firmware]]
+version = "1.0"
+profiles = ["EU868_1_0_3.toml"]
+codec = "ht-sensor.js"
+
+[device.metadata]
+product_url = "https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-ht-sensor-lorawan"
+documentation_url = "https://3940008670-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-McDr-jr9h3qA888r1Yp%2Fuploads%2FuWtULrkAnkdqgLeWDsIu%2FMClimate-HT-Sensor-LoRaWAN-Batteries-Datasheet-en.pdf?alt=media&token=efb23d15-d43d-490b-b82a-c205131feb5c"

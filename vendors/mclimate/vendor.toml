@@ -1,0 +1,8 @@
+[vendor]
+id = "1faa8d1d-2e2e-40db-a578-81d21af4f1ca"
+name = "MClimate"
+vendor_id = 0
+ouis = []
+
+[vendor.metadata]
+homepage = "https://mclimate.eu"

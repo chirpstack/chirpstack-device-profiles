@@ -1,0 +1,13 @@
+[device]
+id = "c521e66f-5745-45a0-b483-00fe1db8eaac"
+name = "Vicki - Smart Radiator Thermostat"
+description = "The MClimate Vicki is a smart radiator thermostat valve that contains a temperature and humidity sensor allowing for temperature control and monitoring temperature and humidity from distance through a LoRaWAN® network. Manual target temperature selection is possible by rotating the outer ring of the device. The target temperature is displayed on the device."
+
+[[device.firmware]]
+version = "3.1"
+profiles = ["EU868_1_0_3.toml"]
+codec = "vicky.js"
+
+[device.metadata]
+product_url = "https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-vicki-lorawan"
+documentation_url = "https://3940008670-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-McDr-jr9h3qA888r1Yp%2Fuploads%2FIDndmRaKu2Enz7MpIiW1%2FMClimate-Vicki-LoRaWAN-Datasheet.pdf?alt=media&token=eec857d7-2821-4880-b56a-399293c49d72"
