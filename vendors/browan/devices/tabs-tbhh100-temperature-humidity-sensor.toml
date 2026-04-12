@@ -1,0 +1,8 @@
+[device]
+id = "c81e9b35-a7ec-48fc-a8a0-6ffdb342cd17"
+name = "Tabs TBHH100 Temperature & Humidity Sensor"
+description = "The Tabs temperature and humidity sensor is designed for in-home and in-building usage for consumer or facility management applications. The design is optimized for high-volume manufacturing, optimal battery lifetime, and pleasing aesthetics for in-building placement."
+firmware = []
+
+[device.metadata]
+product_url = "https://www.browan.com/products-detail/Temperature-Humidity-Sensor/"

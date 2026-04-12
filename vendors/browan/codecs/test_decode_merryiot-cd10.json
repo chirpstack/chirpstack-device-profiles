@@ -1,0 +1,12 @@
+[
+  {
+    "name": "test 1 - MerryIot Co2 Air Quality",
+    "input": {
+      "fPort": 0x7f, // fPort 127
+      "bytes": [0x00,0x0f,0x19,0x20,0x0c,0x02]
+    },
+    "expected": {
+      "data": {"battery_volt":3.6,"temperature":25,"humidity":32,"trigger":0,"button":0,"co2threshold":0,"co2calibration":0,"co2_ppm":524}
+    }
+  }
+]

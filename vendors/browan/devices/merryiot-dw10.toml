@@ -1,0 +1,8 @@
+[device]
+id = "4fed4def-1c99-48cb-a515-2e4160368363"
+name = "MerryIoT DW10 Open/Close Sensor"
+description = "Open/Close, Temperature, Humidity, Vibration"
+firmware = []
+
+[device.metadata]
+product_url = "https://www.browan.com/products-detail/OpenClose-Sensor-EBL-LoRaWAN/"

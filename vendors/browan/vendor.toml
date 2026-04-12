@@ -1,0 +1,15 @@
+[vendor]
+id = "a782551b-91d3-4aee-b362-afdc91d537a0"
+name = "Browan"
+vendor_id = 613
+ouis = ["e8e1e1"]
+devices = [
+    "browan-industrial-tracker.toml",
+    "merryiot-cd10.toml",
+    "merryiot-dw10.toml",
+    "merryiot-ms10.toml",
+    "merryiot-wl10.toml",
+]
+
+[vendor.metadata]
+homepage = "https://www.browan.com/"

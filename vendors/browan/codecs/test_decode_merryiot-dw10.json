@@ -1,0 +1,12 @@
+[
+  {
+    "name": "test 1 - MerryIot Open/Close sensor",
+    "input": {
+      "fPort": 0x78, // fPort 120
+      "bytes": [0x00,0x0f,0x15,0x1c,0x00,0x00,0xd2,0x25,0x00]
+    },
+    "expected": {
+      "data": {"battery_volt":3.6,"temperature":21,"humi":28,"open":0,"button":0,"tamper":0,"tilt":0,"time":0,"count":9682}
+    }
+  }
+]

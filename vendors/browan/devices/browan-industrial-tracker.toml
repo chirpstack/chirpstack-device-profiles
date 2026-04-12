@@ -1,0 +1,17 @@
+[device]
+id = "4ab69083-2dc9-460c-b988-9558d85abb72"
+name = "Browan Industrial Tracker"
+description = "Browan's Industrial GPS Tracker is a versatile GPS tracking device designed for a wide range of applications, including bicycles, vehicles, and pets. Utilizing advanced LoRaWAN® connectivity and a high-resolution GNSS module, it offers reliable location tracking without the costs associated with traditional GPRS networks. With an IP66 rating, this durable tracker is built to withstand harsh environments, ensuring consistent performance in various conditions. Its integrated 3-axis accelerometer enhances tracking accuracy, making it an ideal choice for both personal and commercial asset management."
+
+[[device.firmware]]
+version = "1.01"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "browan-industrial-tracker.js"
+
+[device.metadata]
+product_url = "https://www.browan.com/products-detail/Industrial-GPS-Tracker/"
