@@ -1,0 +1,12 @@
+[
+  {
+    "name": "test 1 - Tabs TBMS100 IR Motion Sensor",
+    "input": {
+      "fPort": 0x66, // fPort 102
+      "bytes": [0x08,0x0b,0x23,0x2f,0xff,0xff,0xff,0xff]
+    },
+    "expected": {
+      "data": {"fPort":102,"battery_volt":3.6,"temperature":3,"mot_motionst":0,"mot_times":65327,"mot_counts":65535}
+    }
+  }
+]

@@ -1,0 +1,8 @@
+[vendor]
+id = "a782551b-91d3-4aee-b362-afdc91d537a0"
+name = "Browan"
+vendor_id = 613
+ouis = ["e8e1e1"]
+
+[vendor.metadata]
+homepage = "https://www.browan.com/"

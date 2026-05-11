@@ -1,0 +1,17 @@
+[device]
+id = "a38dbec2-7c34-41fc-89b7-5f7241bf09fa"
+name = "MerryIoT CD10 Air Quality CO2"
+description = "CO2, Temperature and Humidity"
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "merryiot-cd10.js"
+
+[device.metadata]
+product_url = "https://www.browan.com/products-detail/Air-Quality-CO2-Sensor-LoRaWAN/"

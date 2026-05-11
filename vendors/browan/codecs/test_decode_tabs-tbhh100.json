@@ -1,0 +1,22 @@
+[
+  {
+    "name": "test 1 - Tabs TBHH100 Temperature/Humidity",
+    "input": {
+      "fPort": 0x67, // fPort 103
+      "bytes": [0x08,0x0b,0x23,0x2f,0xff,0xff,0xff,0xff]
+    },
+    "expected": {
+      "data": {"fPort":103,"battery_volt":3.6,"temperature":3,"humidity":47,"thh_type":0,"CO2":0,"VOC":0}
+    }
+  },
+  {
+    "name": "test 2 - Tabs TBHH100 Temperature/Humidity",
+    "input": {
+      "fPort": 0x67, // fPort 103
+      "bytes": [0x08,0x0a,0x0d,0x3a,0xff,0xff,0xff,0xff]
+    },
+    "expected": {
+      "data": {"fPort":103,"battery_volt":3.5,"temperature":-19,"humidity":58,"thh_type":0,"CO2":0,"VOC":0}
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[device]
+id = "a8849d30-ae63-48b5-994a-bd7e23aa60b3"
+name = "Milesight AM307"
+description = "Indoor Air Quality Sensor (5-in-1)"
+
+[[device.firmware]]
+version = "1.3"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "am307.js"
+
+[device.metadata]
+product_url = "https://www.milesight.com/iot/product/lorawan-sensor/am300"
+documentation_url = "https://www.milesight.com/iot/product/lorawan-sensor/am300"

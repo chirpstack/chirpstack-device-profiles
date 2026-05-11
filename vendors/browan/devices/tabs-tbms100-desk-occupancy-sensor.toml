@@ -1,0 +1,17 @@
+[device]
+id = "ee49d3c6-cca9-4cef-ae21-a38fa426ae4e"
+name = "Tabs TBMS100 Desk Occupancy Sensor"
+description = "Leveraging LoRaWAN® connectivity, the Desk Occupancy Sensor is ideal for home monitoring and smart office deployments. Continuously monitoring its built-in Passive Infrared (PIR) sensor, the Desk Occupancy Sensor sends an uplink upon detecting activity and again when the room becomes vacant. Additionally, it transmits regular uplinks of the room's current occupancy every hour when unoccupied or every 10 minutes when occupied. Measuring just 50mm in size, this compact sensor is perfect for home surveillance and smart office setups."
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "tabs-tbms100.js"
+
+[device.metadata]
+product_url = "https://www.browan.com/products-detail/PIR/"
