@@ -1,0 +1,8 @@
+[vendor]
+id = "261a1f3d-ac17-441a-9c03-0d5e856361ca"
+name = "Sept-S"
+vendor_id = 1115
+ouis = ["8C1F64916"]
+
+[vendor.metadata]
+homepage = "https://sieben-s.com"

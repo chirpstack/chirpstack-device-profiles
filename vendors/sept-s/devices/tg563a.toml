@@ -1,0 +1,13 @@
+[device]
+id = "5f9b7412-7a8f-4ec1-9059-6688aa8b9a6f"
+name = "TG563A"
+description = "TG563A Smoke Detector "
+
+[[device.firmware]]
+version = "1.0.0"
+profiles = ["EU868-1_0_0_3.toml"]
+codec = "tg563a.js"
+
+[device.metadata]
+product_url = "https://sieben-s.com/produkte/"
+documentation_url = "https://github.com/sept-s/tg563a-payload-decoder/blob/main/docs/SE000304A_TG563A_Technical_Reference_Manual.pdf"

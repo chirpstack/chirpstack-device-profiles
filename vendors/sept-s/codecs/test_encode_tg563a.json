@@ -1,0 +1,19 @@
+[
+  {
+    "name":"Example of a downlink to change the TX period",
+    "input":{
+      "data":[
+        {
+          "command":"SET_TX_PERIOD",
+          "parameter":5
+        }
+      ]
+    },
+    "expected":{
+      "fPort":1,
+      "bytes":[
+        5
+      ]
+    }
+  }
+]
