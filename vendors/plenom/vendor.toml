@@ -1,7 +1,7 @@
 [vendor]
 id = "e90b1a8c-34f9-44a6-816d-31b46ae89605"
 name = "Plenom A/S"
-vendor_id = 0
+vendor_id = 1039
 ouis = ["D824EC"]
 
 [vendor.metadata]
