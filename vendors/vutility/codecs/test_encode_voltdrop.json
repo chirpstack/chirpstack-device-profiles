@@ -1,0 +1,16 @@
+[
+    {
+    "name": "Transmit Packet Schedule",
+    "input": {
+      "data": {
+        "packetTransmitSchedule": [40, 41, 40, 41, 0, 42, 43, 44, 45]
+      }
+    },
+    "expected": {
+      "bytes": [0, 48, 9, 40, 41, 40, 41, 0, 42, 43, 44, 45],
+      "errors": [],
+      "warnings": [],
+      "fPort": 3
+    }
+  },
+]

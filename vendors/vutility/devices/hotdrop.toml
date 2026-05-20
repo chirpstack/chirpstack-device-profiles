@@ -1,0 +1,19 @@
+[device]
+id = "8d125ac1-6dd7-4518-b093-e18323fe26c5"
+name = "Hotdrop"
+description = "The HotDrop is a wireless, self-powered energy monitoring device created and developed by Vutility. Ideal for monitoring precise current measurements, such as amperage and amp-hours, the HotDrop offers a scalable solution for managing energy consumption across commercial and industrial environments."
+
+[[device.firmware]]
+version = "30"
+profiles = [
+    "US915_1_0_2_B.toml",
+    "KR920_1_0_2_B.toml",
+    "EU868_1_0_2_B.toml",
+    "AU915_1_0_2_B.toml",
+    "AS923_1_0_2_B.toml",
+]
+codec = "hotdrop.js"
+
+[device.metadata]
+product_url = "https://vutility.com/products/hotdrop"
+documentation_url = "https://vutility.com/products/hotdrop"

@@ -1,0 +1,16 @@
+[
+    {
+    "name": "downlink transmit interval (30 min)",
+    "input": {
+      "data": {
+        "transmitIntervalSeconds": 1800
+      }
+    },
+    "expected": {
+      "bytes": [84, 0, 0, 0, 225, 68, 0, 0, 0, 0],
+      "errors": [],
+      "warnings": [],
+      "fPort": 3
+    }
+  }
+]

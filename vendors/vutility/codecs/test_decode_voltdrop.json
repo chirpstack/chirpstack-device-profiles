@@ -1,0 +1,30 @@
+[
+    {
+    "name": "Consolidated Voltage, Phase Angle, Amperage, and Max Amperage All Ones",
+    "input": {
+      "bytes": [38, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255],
+      "fPort": 3,
+      "recvTime": "2023-05-02T20:00:00.000+00:00"
+    },
+    "expected": {
+      "data": {
+        "voltageL1": 1023.984375,
+        "voltageL2": 1023.984375,
+        "voltageL3": 1023.984375,
+        "phaseAngleL1": 360.0,
+        "phaseAngleL2": 360.0,
+        "phaseAngleL3": 360.0,
+        "capacitorVoltage": 5,
+        "currentL1": 4095.9375,
+        "currentL2": 4095.9375,
+        "currentL3": 4095.9375,
+        "maxCurrentL1": 36735.439453125,
+        "maxCurrentL2": 36735.439453125,
+        "maxCurrentL3": 36735.439453125,
+        "temperatureCelsius": 80
+      },
+      "errors": [],
+      "warnings": []
+    }
+  }
+]

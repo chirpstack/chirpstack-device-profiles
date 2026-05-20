@@ -1,0 +1,16 @@
+[
+    {
+    "name": "factory reset",
+    "input": {
+      "data": {
+        "factoryReset": true
+      }
+    },
+    "expected": {
+      "bytes": [70, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "errors": [],
+      "warnings": [],
+      "fPort": 3
+    }
+  }
+]

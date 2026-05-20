@@ -1,0 +1,19 @@
+[device]
+id = "9d052aae-4d94-4982-933c-08cb6575720a"
+name = "pulsedrop"
+description = "PulseDrop is a robust, battery-powered device designed for real-time monitoring of pulse outputs from gas, water, and electrical meters. Ideal for use in commercial and industrial environments, PulseDrop provides long-range wireless data transmission via LoRaWAN, ensuring reliable communication over distances without the need for complex wiring."
+
+[[device.firmware]]
+version = "2.0.0"
+profiles = [
+    "AS923_1_0_2_B.toml",
+    "AU915_1_0_2_B.toml",
+    "EU868_1_0_2_B.toml",
+    "KR920_1_0_2_B.toml",
+    "US915_1_0_2_B.toml",
+]
+codec = "pulsedrop.js"
+
+[device.metadata]
+product_url = "https://vutility.com/products/pulsedrop"
+documentation_url = "https://vutility.com/products/pulsedrop"

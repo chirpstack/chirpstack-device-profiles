@@ -1,0 +1,22 @@
+[
+    {
+    "name": "standard uplink, empty",
+    "input": {
+      "bytes": [50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "fPort": 3,
+      "recvTime": "2023-05-02T20:00:00.000+00:00"
+    },
+    "expected": {
+      "data": {
+        "ampHourAccumulation": 0,
+        "averageAmps": 0,
+        "maximumAmps": 0,
+        "minimumAmps": 0,
+        "capacitorVoltage": 0,
+        "temperatureCelsius": -40
+      },
+      "errors": [],
+      "warnings": ["Low capacitor voltage may reduce transmit interval."]
+    }
+  }
+]

@@ -1,0 +1,8 @@
+[vendor]
+id = "6256cea8-29da-4b7f-af27-543bd2746c55"
+name = "Vutility"
+vendor_id = 0
+ouis = []
+
+[vendor.metadata]
+homepage = "https://vutility.com"

@@ -1,0 +1,19 @@
+[device]
+id = "b1a68911-9fd8-4f1a-8797-59804adca52c"
+name = "voltdrop"
+description = "VoltDrop is a wireless, self-powered energy monitoring device designed to provide commercial and industrial facilities with real-time, granular insights into their energy consumption. Whether you're managing single-phase or complex multi-phase systems, VoltDrop offers unparalleled accuracy in measuring apparent energy, active energy, voltage, power factor, and amperage across a wide range of systems."
+
+[[device.firmware]]
+version = "2.4"
+profiles = [
+    "AS923_1_0_2_B.toml",
+    "AU915_1_0_2_B.toml",
+    "EU868_1_0_2_B.toml",
+    "KR920_1_0_2_B.toml",
+    "US915_1_0_2_B.toml",
+]
+codec = "voltdrop.js"
+
+[device.metadata]
+product_url = "https://vutility.com/products/voltdrop"
+documentation_url = "https://vutility.com/products/voltdrop"
