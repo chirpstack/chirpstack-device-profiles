@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "name": "Test decode periodic uplink (battery, temperature, humidity, leakage)",
+    "input": {
+      "bytes": [1, 117, 92, 3, 103, 52, 1, 4, 104, 101, 5, 0, 0]
+    },
+    "expected": {
+      "data": {
+        "battery": 92,
+        "temperature": 30.8,
+        "humidity": 50.5,
+        "leakage_status": "normal"
+      }
+    }
+  },
+  {
+    "name": "Test decode leakage alarm",
+    "input": {
+      "bytes": [5, 0, 1]
+    },
+    "expected": {
+      "data": {
+        "leakage_status": "leak"
+      }
+    }
+  },
+  {
+    "name": "Test decode history",
+    "input": {
+      "bytes": [32, 206, 0, 241, 83, 101, 255, 0, 120, 1]
+    },
+    "expected": {
+      "data": {
+        "history": [
+          {
+            "timestamp": 1700000000,
+            "temperature": 25.5,
+            "humidity": 60,
+            "leakage_status": "leak"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Test decode downlink response (report interval)",
+    "input": {
+      "bytes": [255, 3, 88, 2]
+    },
+    "expected": {
+      "data": {
+        "report_interval": 600
+      }
+    }
+  }
+]

@@ -1,1 +1,141 @@
-[]
+[
+  {
+    "name": "Test encode reboot",
+    "input": {
+      "data": {
+        "reboot": "yes"
+      }
+    },
+    "expected": {
+      "bytes": [255, 16, 255]
+    }
+  },
+  {
+    "name": "Test encode report interval (600 s)",
+    "input": {
+      "data": {
+        "report_interval": 600
+      }
+    },
+    "expected": {
+      "bytes": [255, 3, 88, 2]
+    }
+  },
+  {
+    "name": "Test encode collection interval (300 s)",
+    "input": {
+      "data": {
+        "collection_interval": 300
+      }
+    },
+    "expected": {
+      "bytes": [255, 2, 44, 1]
+    }
+  },
+  {
+    "name": "Test encode multiple commands",
+    "input": {
+      "data": {
+        "report_interval": 600,
+        "collection_interval": 300
+      }
+    },
+    "expected": {
+      "bytes": [255, 3, 88, 2, 255, 2, 44, 1]
+    }
+  },
+  {
+    "name": "Test encode history enable",
+    "input": {
+      "data": {
+        "history_enable": "enable"
+      }
+    },
+    "expected": {
+      "bytes": [255, 104, 1]
+    }
+  },
+  {
+    "name": "Test encode retransmit enable",
+    "input": {
+      "data": {
+        "retransmit_enable": "enable"
+      }
+    },
+    "expected": {
+      "bytes": [255, 105, 1]
+    }
+  },
+  {
+    "name": "Test encode retransmit interval (600 s)",
+    "input": {
+      "data": {
+        "retransmit_interval": 600
+      }
+    },
+    "expected": {
+      "bytes": [255, 106, 0, 88, 2]
+    }
+  },
+  {
+    "name": "Test encode temperature alarm (between 10 and 30)",
+    "input": {
+      "data": {
+        "temperature_alarm_config": {
+          "condition": "between",
+          "threshold_min": 10,
+          "threshold_max": 30
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 6, 11, 100, 0, 44, 1, 0, 0, 0, 0]
+    }
+  },
+  {
+    "name": "Test encode leakage alarm (every 600 s, 10 times)",
+    "input": {
+      "data": {
+        "leakage_alarm_config": {
+          "enable": "enable",
+          "report_interval": 600,
+          "report_times": 10
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 6, 17, 0, 0, 0, 0, 88, 2, 10, 0]
+    }
+  },
+  {
+    "name": "Test encode temperature calibration (+1.5)",
+    "input": {
+      "data": {
+        "temperature_calibration_settings": {
+          "enable": "enable",
+          "calibration_value": 1.5
+        }
+      }
+    },
+    "expected": {
+      "bytes": [255, 234, 128, 15, 0]
+    }
+  },
+  {
+    "name": "Test encode D2D master config",
+    "input": {
+      "data": {
+        "d2d_master_config": [
+          {
+            "mode": "leakage_alarm",
+            "report_type": "d2d",
+            "d2d_cmd": "1234"
+          }
+        ]
+      }
+    },
+    "expected": {
+      "bytes": [255, 121, 3, 1, 52, 18]
+    }
+  }
+]
