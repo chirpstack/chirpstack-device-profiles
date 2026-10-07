@@ -5,7 +5,7 @@ description = "The MClimate HT LoRaWAN® Sensor is an indoor temperature and hum
 
 [[device.firmware]]
 version = "1.0"
-profiles = ["EU868_1_0_3.toml"]
+profiles = ["EU868-1_0_3.toml"]
 codec = "ht-sensor.js"
 
 [device.metadata]

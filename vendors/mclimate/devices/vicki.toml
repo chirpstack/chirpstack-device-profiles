@@ -5,7 +5,12 @@ description = "The MClimate Vicki is a smart radiator thermostat valve that cont
 
 [[device.firmware]]
 version = "3.1"
-profiles = ["EU868_1_0_3.toml"]
+profiles = ["EU868-1_0_3.toml"]
+codec = "vicki.js"
+
+[[device.firmware]]
+version = "3.5"
+profiles = ["EU868-1_0_3.toml"]
 codec = "vicki.js"
 
 [device.metadata]

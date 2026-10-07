@@ -7,7 +7,7 @@ reg_params_revision = "A"
 supports_otaa = true
 supports_class_b = false
 supports_class_c = false
-max_eirp = 0
+max_eirp = 16
 
 [profile.abp]
 rx1_delay = 0
