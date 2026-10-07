@@ -1,0 +1,114 @@
+[
+    {
+        "name": "LORAWAN PAYLOAD EXAMPLE",
+        "input": {
+            "fPort": 1,
+            "bytes": [ 0x45, 0x2a, 0x2f, 0x00, 0x00, 0x86, 0x00, 0x00, 0x0a, 0x00, 0xcd ]
+        },
+        "expected": {
+            "data": {
+                "value": 12074,
+                "reverseFlow": 134,
+                "alarm": {
+                    "waterLeak": false,
+                    "wrongInstallation": true,
+                    "overflow": false,
+                    "burst": true,
+                    "reverseFlow": false,
+                    "lowBattery": false
+                },
+                "diameter": 0,
+                "medium": 0,
+                "temperature": 20.5
+            }
+        }
+    },
+    {
+        "name": "LORAWAN PAYLOAD EXAMPLE: negative temperature",
+        "input": {
+            "fPort": 1,
+            "bytes": [ 0x45, 0x2a, 0x2f, 0x00, 0x00, 0x86, 0x00, 0x00, 0x0a, 0xff, 0x33 ]
+        },
+        "expected": {
+            "data": {
+                "value": 12074,
+                "reverseFlow": 134,
+                "alarm": {
+                    "waterLeak": false,
+                    "wrongInstallation": true,
+                    "overflow": false,
+                    "burst": true,
+                    "reverseFlow": false,
+                    "lowBattery": false
+                },
+                "diameter": 0,
+                "medium": 0,
+                "temperature": -20.5
+            }
+        }
+    },
+    {
+        "name": "Without temperature",
+        "input": {
+            "fPort": 1,
+            "bytes": [ 0x45, 0xb1, 0x04, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00 ]
+        },
+        "expected": {
+            "data": {
+                "value": 1201,
+                "reverseFlow": 3,
+                "alarm": {
+                    "waterLeak": false,
+                    "wrongInstallation": false,
+                    "overflow": false,
+                    "burst": false,
+                    "reverseFlow": false,
+                    "lowBattery": false
+                },
+                "diameter": 0,
+                "medium": 0
+            }
+        }
+    },
+    {
+        "name": "Long message",
+        "input": {
+            "fPort": 1,
+            "bytes": [ 0x50, 0xba, 0x07, 0x00, 0x00, 0x20, 0xfa, 0xaf, 0x31, 0xba, 0x07, 0x00, 0x00, 0x80, 0xf8, 0xaf, 0x31, 0x00, 0x00, 0x76, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x10, 0x00, 0x00, 0x00, 0x05, 0x00, 0xc8, 0xff, 0x1f, 0x00, 0x0a, 0x00, 0xcd ]
+        },
+        "expected": {
+            "data": {
+                "value": 1978,
+                "date": "2026-06-01T08:06:56.000Z",
+                "alarm": {
+                    "waterLeak": false,
+                    "wrongInstallation": true,
+                    "overflow": false,
+                    "burst": true,
+                    "reverseFlow": false,
+                    "lowBattery": false
+                },
+                "diameter": 0,
+                "medium": 0,
+                "temperature": 20.5,
+                "log": [
+                  { "value": 1978, "date": "2026-06-01T08:00:00.000Z" },
+                  { "value": 1978, "date": "2026-06-01T07:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T06:00:00.000Z", "delta": 118 },
+                  { "value": 1860, "date": "2026-06-01T05:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T04:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T03:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T02:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T01:00:00.000Z", "delta": 0 },
+                  { "value": 1860, "date": "2026-06-01T00:00:00.000Z", "delta": 0 },
+                  { "value": 1858, "date": "2026-05-31T23:00:00.000Z", "delta": 2 },
+                  { "value": 1842, "date": "2026-05-31T22:00:00.000Z", "delta": 16 },
+                  { "value": 1842, "date": "2026-05-31T21:00:00.000Z", "delta": 0 },
+                  { "value": 1837, "date": "2026-05-31T20:00:00.000Z", "delta": 5 },
+                  { "value": 1893, "date": "2026-05-31T19:00:00.000Z", "delta": -56 },
+                  { "value": 1862, "date": "2026-05-31T18:00:00.000Z", "delta": 31 }
+                ]
+            }
+        }
+    }
+]

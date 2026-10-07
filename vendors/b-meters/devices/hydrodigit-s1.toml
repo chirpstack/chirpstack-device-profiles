@@ -1,0 +1,13 @@
+[device]
+id = "c4730e3b-80bc-4a08-b55b-eaccdd44d087"
+name = "HYDRODIGIT-S1"
+description = "Single-jet water meter with digital display and integrated LoRaWAN module."
+
+[[device.firmware]]
+version = "0"
+profiles = ["EU868-1_0_3.toml"]
+codec = "hydrodigit-s1.js"
+
+[device.metadata]
+product_url = "https://www.bmeters.com/en/products/hydrodigit-s1/"
+documentation_url = "https://www.bmeters.com/wp-content/uploads/2023/07/v2.3_HYDRODIGIT-S1_UM_EN.pdf"

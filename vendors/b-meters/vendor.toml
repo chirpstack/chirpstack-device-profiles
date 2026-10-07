@@ -1,0 +1,8 @@
+[vendor]
+id = "416f45e3-5fda-46f4-9eca-2b8c944c6d10"
+name = "B Meters"
+vendor_id = 528
+ouis = []
+
+[vendor.metadata]
+homepage = "https://www.bmeters.com/"
