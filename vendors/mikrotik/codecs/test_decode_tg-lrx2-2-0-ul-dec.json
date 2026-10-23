@@ -1,0 +1,87 @@
+[
+    {
+    "name": "Test 2",
+    "input": {
+      "fPort": 149,
+      "bytes": [0x44, 0x0C]
+    },
+    "expected": {
+        "data": {
+            "battery_mv": 3140
+        },
+        "warnings" : [],
+        "errors" : []
+        }
+    },
+    
+    {
+    "name": "Test 3",
+    "input": {
+      "fPort": 149,
+      "bytes": [0x00, 0x00]
+    },
+    "expected": {
+        "data": {
+            "battery_mv": 3140
+        },
+        "warnings" : [],
+        "errors" : []
+    }
+    },
+
+    
+    {
+    "name": "Test 4",
+    "input": {
+      "fPort": 152,
+      "bytes": [0x78, 0x04, 0xF9, 0x7A, 0x1C, 0x00, 0x97, 0x30, 0x60, 0x55]
+    },
+    "expected": {
+      "data": {
+        "cfg_app_crc":0x0478,
+        "cfg_net_crc":0x7AF9,
+        "cfg_frames_crc":0x001C,
+        "cfg_data_crc":0x3097,
+        "cfg_rules_crc":0x5560
+      }.
+        "warnings" : [],
+        "errors" : []
+    }
+    },
+    
+    {
+    "name": "Test 5",
+    "input": {
+      "fPort": 129,
+      "bytes": [0xF2, 0x16, 0x2C, 0x00, 0x80, 0x81, 0x06, 0x01, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x84, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x8F, 0x00, 0x00, 0x81, 0x00, 0x00, 0x02, 0x00,
+                0x00, 0x33, 0x65, 0x63, 0x32, 0x38, 0x35, 0x81, 0x48, 0x4B, 0x35, 0x30, 0x31, 0x53, 0x41, 0x4B,
+                0x52, 0x43, 0x4A]
+    },
+    "expected": {
+      "data": {
+        "temperature":22.9453125,
+        "humidity":44,
+        "mag_sw_cnt_u8":0,
+        "major_axis_orientation":"XH",
+        "activity_state":"IDLE",
+        "free_fall_evnt":0,
+        "impact_evnt":0,
+        "pending_evnt":1,
+        "activity_s":0,
+        "high_activity_s":0,
+        "battery_mv":0,
+        "version_pid":0,
+        "version_maj":2,
+        "version_min":0,
+        "version_rev":0,
+        "version_hash":"3ec285",
+        "serial_number":"HK501SAKRCJ",
+        "events[0].activity_state":"IDLE",
+        "events[0].time_unix":1
+      },
+    "warnings" : [],
+    "errors" : []
+    }
+    }
+]
