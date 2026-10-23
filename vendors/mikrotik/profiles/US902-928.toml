@@ -1,0 +1,33 @@
+[profile]
+id = "f88cdad7-3dcb-4e0e-9e67-600bd8bd2d7e"
+vendor_profile_id = 1
+region = "US915"
+mac_version = "1.0.4"
+reg_params_revision = "RP002-1.0.4"
+supports_otaa = true
+supports_class_b = true
+supports_class_c = false
+max_eirp = 15
+
+[profile.abp]
+rx1_delay = 0
+rx1_dr_offset = 0
+rx2_dr = 0
+rx2_freq = 0
+
+[profile.class_b]
+timeout_secs = 60
+ping_slot_nb_k = 5
+ping_slot_dr = 8
+ping_slot_freq = 0
+
+[profile.class_c]
+timeout_secs = 0
+
+[profile.app_layer_params]
+ts003_version = ""
+ts003_f_port = 202
+ts004_version = ""
+ts004_f_port = 201
+ts005_version = ""
+ts005_f_port = 200
