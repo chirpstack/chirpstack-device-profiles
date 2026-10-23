@@ -1,0 +1,224 @@
+[{
+        "name": "Test 1",
+        "input": {
+            "fPort": 133,
+            "bytes": [0xFB, 0xFE, 0x7F]
+        },
+        "expected": {
+            "data": {
+                "orientation_x": -5,
+                "orientation_y": -2,
+                "orientation_z": 127
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+    {
+        "name": "Test 2",
+        "input": {
+            "fPort": 149,
+            "bytes": [0x44, 0x0C]
+        },
+        "expected": {
+            "data": {
+                "battery_mv": 3140
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 3",
+        "input": {
+            "fPort": 130,
+            "bytes": [0x86, 0x82, 0x33, 0x03, 0x69, 0x0F, 0x01, 0x06, 0x85, 0x33, 0x03, 0x69, 0x0F, 0x00]
+        },
+        "expected": {
+            "data": {
+                "events": [{
+                    "time": "2025-10-30T09:44:34.000Z",
+                    "time_unix": 1761817474,
+                    "activity_state": "LOW"
+                }, {
+                    "time": "2025-10-30T09:44:37.000Z",
+                    "time_unix": 1761817477,
+                    "activity_state": "IDLE"
+                }]
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+
+    {
+        "name": "Test 4",
+        "input": {
+            "fPort": 152,
+            "bytes": [0x78, 0x04, 0xF9, 0x7A, 0x1C, 0x00, 0x97, 0x30, 0x60, 0x55]
+        },
+        "expected": {
+            "data": {
+                "cfg_app_crc": 0x0478,
+                "cfg_net_crc": 0x7AF9,
+                "cfg_frames_crc": 0x001C,
+                "cfg_data_crc": 0x3097,
+                "cfg_rules_crc": 0x5560
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 5",
+        "input": {
+            "fPort": 154,
+            "bytes": [0x00, 0x80, 0x1E, 0x91, 0x94, 0x00, 0x93, 0x03, 0x00, 0xC3, 0x92, 0x09, 0xC3, 0x92,
+                0x0A, 0x18, 0x93, 0x03, 0x94, 0x02, 0xD1, 0x01, 0x2C, 0xC2, 0x00, 0x93, 0x03, 0xC3, 0xD2,
+                0x26, 0xBC, 0x26, 0x61
+            ]
+        },
+        "expected": {
+            "data": {
+                "app_cfg": {
+                    "offset": 0,
+                    "len": 30,
+                    "frag_bytes": [145, 148, 0, 147, 3, 0, 195, 146, 9, 195, 146, 10, 24, 147, 3, 148, 2, 209, 1, 44, 194, 0, 147, 3, 195, 210, 38, 188, 38, 97],
+                    "final_frag": 1
+                }
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+    {
+        "name": "Test 6",
+        "input": {
+            "fPort": 129,
+            "bytes": [0xF8, 0x16, 0x27, 0x12, 0xE4]
+        },
+        "expected": {
+            "data": {
+                "temperature": 22.96875,
+                "humidity": 39,
+                "mag_sw_cnt_u8": 18,
+                "major_axis_orientation": "ZH",
+                "activity_state": "IDLE",
+                "free_fall_evnt": 1,
+                "impact_evnt": 1,
+                "pending_evnt": 1
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 7",
+        "input": {
+            "fPort": 129,
+            "bytes": [0xF2, 0x16, 0x2C, 0x00, 0x80, 0x81, 0x06, 0x01, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x84, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x8F, 0x00, 0x00, 0x81, 0x00, 0x00, 0x02, 0x00,
+                0x00, 0x33, 0x65, 0x63, 0x32, 0x38, 0x35, 0x81, 0x48, 0x4B, 0x35, 0x30, 0x31, 0x53, 0x41, 0x4B,
+                0x52, 0x43, 0x4A
+            ]
+        },
+        "expected": {
+            "data": {
+                "temperature": 22.9453125,
+                "humidity": 44,
+                "mag_sw_cnt_u8": 0,
+                "major_axis_orientation": "XH",
+                "activity_state": "IDLE",
+                "free_fall_evnt": 0,
+                "impact_evnt": 0,
+                "pending_evnt": 1,
+                "events": [{
+                    "time": "1970-01-01T00:00:01.000Z",
+                    "time_unix": 1,
+                    "activity_state": "IDLE"
+                }],
+                "activity_s": 0,
+                "high_activity_s": 0,
+                "battery_mv": 0,
+                "version_pid": 0,
+                "version_maj": 2,
+                "version_min": 0,
+                "version_rev": 0,
+                "version_hash": "3ec285",
+                "serial_number": "HK501SAKRCJ"
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 8",
+        "input": {
+            "fPort": 129,
+            "bytes": [0x10, 0x1B, 0x01, 0x5F, 0b01001101]
+        },
+        "expected": {
+            "data": {
+                "temperature": 27.0625,
+                "humidity": 1,
+                "mag_sw_cnt_u8": 95,
+                "major_axis_orientation": "ZL",
+                "activity_state": "LOW",
+                "free_fall_evnt": 0,
+                "impact_evnt": 1,
+                "pending_evnt": 0
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 9",
+        "input": {
+            "fPort": 130,
+            "bytes": [0x86, 0x67, 0xC7, 0x81, 0x69, 0x1C, 0x00, 0x85, 0x67, 0xC7, 0x81, 0x69, 0x6B, 0x06, 0x01, 0x00, 0x00, 0x00, 0x0A, 0x11]
+        },
+        "expected": {
+            "data": {
+                "events": [{
+                    "time": "2026-02-03T10:01:11.000Z",
+                    "time_unix": 1770112871,
+                    "angle_1": 0
+                }, {
+                    "time": "2026-02-03T10:01:11.000Z",
+                    "time_unix": 1770112871,
+                    "data_rule": 7
+                }, {
+                    "time": "1970-01-01T00:00:01.000Z",
+                    "time_unix": 1,
+                    "humidity": 17
+                }]
+            },
+            "warnings": [],
+            "errors": []
+        }
+    },
+
+    {
+        "name": "Test 10",
+        "input": {
+            "fPort": 133,
+            "bytes": [0xFE, 0xFA, 0x7F]
+        },
+        "expected": {
+            "data": {
+                "orientation_x": -2,
+                "orientation_y": -6,
+                "orientation_z": 127
+            },
+            "warnings": [],
+            "errors": []
+        }
+    }
+]

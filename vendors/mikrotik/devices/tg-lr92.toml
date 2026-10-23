@@ -1,0 +1,18 @@
+[device]
+id = "62d222b5-5fca-43e5-a2c3-703f462183d6"
+name = "tg-lr92"
+description = "Programmable temperature, humidity, orientation, motion and magnetic switch sensor."
+
+[[device.firmware]]
+version = "2.0"
+profiles = [
+    "US902-928.toml",
+    "KR920-923.toml",
+    "AU915-925.toml",
+    "AS923.toml",
+]
+codec = "tg-lrx2-2-0-ul-dec.js"
+
+[device.metadata]
+product_url = "https://mikrotik.com/product/tg_lr92"
+documentation_url = "https://help.mikrotik.com/docs/spaces/UM/pages/181338171/TG-LR"

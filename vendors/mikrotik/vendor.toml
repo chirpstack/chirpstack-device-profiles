@@ -1,0 +1,8 @@
+[vendor]
+id = "51f0874b-49bf-49db-a9f7-9cb0deaa4d52"
+name = "MikroTik"
+vendor_id = 980
+ouis = []
+
+[vendor.metadata]
+homepage = "https://mikrotik.com"
