@@ -1,0 +1,7 @@
+[
+  {
+    "description": "downlink is unsupported",
+    "input": {"data": {}},
+    "output": {"errors": ["S2108 downlink is not supported"]}
+  }
+]

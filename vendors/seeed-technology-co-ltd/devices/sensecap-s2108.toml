@@ -1,0 +1,20 @@
+[device]
+id = "54a702ab-6b70-4de2-bc06-858d75d3c3d3"
+name = "SenseCAP S2108"
+description = "Soil Moisture, Temperature and Pore EC Sensor"
+
+[[device.firmware]]
+version = "1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+    "IN865-1_0_3.toml",
+    "KR920-1_0_3.toml",
+]
+codec = "SenseCAP_S2108.js"
+
+[device.metadata]
+product_url = "https://www.seeedstudio.com/SenseCAP-S2108-Soil-Moisture-Temperature-and-Pore-EC-Sensor-p-5825.html"
+documentation_url = "https://files.seeedstudio.com/products/114992867/SenseCAP%20S210X%20LoRaWAN%20Sensor%20Catalogue.pdf"
