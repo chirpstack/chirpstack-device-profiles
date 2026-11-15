@@ -1,40 +1,40 @@
 [
   {
-    "description": "negative temperature and non-zero measurements",
+    "name": "negative temperature and non-zero measurements",
     "input": {
       "fPort": 2,
       "bytes": [1, 6, 16, 252, 214, 255, 255, 1, 7, 16, 72, 163, 0, 0, 1, 12, 16, 100, 0, 0, 0, 1, 109, 16, 158, 72, 0, 0, 1, 108, 16, 108, 2, 0, 0, 128, 158]
     },
-    "output": {
+    "expected": {
       "data": {"soil_temperature": -10.5, "soil_moisture": 41.8, "bulk_ec": 0.1, "pore_ec": 0.62, "epsilon": 18.59}
     }
   },
   {
-    "description": "fault sentinel is represented as null",
+    "name": "fault sentinel is represented as null",
     "input": {"fPort": 2, "bytes": [1, 6, 16, 128, 132, 30, 0, 13, 126]},
-    "output": {"data": {"soil_temperature": null}}
+    "expected": {"data": {"soil_temperature": null}}
   },
   {
-    "description": "invalid CRC",
+    "name": "invalid CRC",
     "input": {
       "fPort": 2,
       "bytes": [1, 6, 16, 242, 68, 0, 0, 1, 7, 16, 0, 0, 0, 0, 1, 12, 16, 0, 0, 0, 0, 1, 109, 16, 162, 3, 0, 0, 1, 108, 16, 0, 0, 0, 0, 240, 242]
     },
-    "output": {"errors": ["Invalid S2108 CRC"]}
+    "expected": {"errors": ["Invalid S2108 CRC"]}
   },
   {
-    "description": "real S2108 uplink",
+    "name": "real S2108 uplink",
     "input": {
       "fPort": 2,
       "bytes": [1, 6, 16, 242, 68, 0, 0, 1, 7, 16, 0, 0, 0, 0, 1, 12, 16, 0, 0, 0, 0, 1, 109, 16, 162, 3, 0, 0, 1, 108, 16, 0, 0, 0, 0, 240, 243]
     },
-    "output": {
+    "expected": {
       "data": {"soil_temperature": 17.65, "soil_moisture": 0, "bulk_ec": 0, "pore_ec": 0, "epsilon": 0.93}
     }
   },
   {
-    "description": "truncated frame",
+    "name": "truncated frame",
     "input": {"fPort": 2, "bytes": [1, 2, 3]},
-    "output": {"errors": ["Invalid S2108 frame length"]}
+    "expected": {"errors": ["Invalid S2108 frame length"]}
   }
 ]
