@@ -6,7 +6,7 @@
       "bytes": [1, 6, 16, 252, 214, 255, 255, 1, 7, 16, 72, 163, 0, 0, 1, 12, 16, 100, 0, 0, 0, 1, 109, 16, 158, 72, 0, 0, 1, 108, 16, 108, 2, 0, 0, 128, 158]
     },
     "expected": {
-      "data": {"soil_temperature": -10.5, "soil_moisture": 41.8, "bulk_ec": 0.1, "pore_ec": 0.62, "epsilon": 18.59}
+      "data": {"soil_temperature": -10.5, "soil_moisture": 41.8, "bulk_ec": 0.1, "epsilon": 18.59, "pore_ec": 0.62}
     }
   },
   {
@@ -29,7 +29,7 @@
       "bytes": [1, 6, 16, 242, 68, 0, 0, 1, 7, 16, 0, 0, 0, 0, 1, 12, 16, 0, 0, 0, 0, 1, 109, 16, 162, 3, 0, 0, 1, 108, 16, 0, 0, 0, 0, 240, 243]
     },
     "expected": {
-      "data": {"soil_temperature": 17.65, "soil_moisture": 0, "bulk_ec": 0, "pore_ec": 0, "epsilon": 0.93}
+      "data": {"soil_temperature": 17.65, "soil_moisture": 0, "bulk_ec": 0, "epsilon": 0.93, "pore_ec": 0}
     }
   },
   {
