@@ -13,6 +13,7 @@ devices = [
     "sensecap-s2105.toml",
     "sensecap-s2106.toml",
     "sensecap-s2107.toml",
+    "sensecap-s2108.toml",
     "sensecap-s2120.toml",
     "sensecap-t1000-a.toml",
     "sensecap-t1000-b.toml",
