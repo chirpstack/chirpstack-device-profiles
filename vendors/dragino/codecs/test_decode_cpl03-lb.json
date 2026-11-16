@@ -1,0 +1,280 @@
+[
+  {
+    "name": "Decode multiple history records without leaking state",
+    "input": {
+      "fPort": 3,
+      "bytes": [193, 0, 0, 1, 0, 0, 50, 100, 174, 82, 194, 76, 0, 0, 23, 0, 0, 5, 100, 174, 84, 171]
+    },
+    "expected": {
+      "data": {
+        "DATALOG": "[CPL01,SUM,NO,FALSE,OPEN,0,1,50,2023-07-12 07:14:10],[CPL03,SUM,NO,4,23,5,2023-07-12 07:22:19],",
+        "PNACKMD": "True"
+      }
+    }
+  },
+  {
+    "name": "A later history uplink contains only its own records",
+    "input": {
+      "fPort": 3,
+      "bytes": [1, 0, 0, 2, 0, 0, 3, 128, 0, 0, 0]
+    },
+    "expected": {
+      "data": {
+        "DATALOG": "[CPL01,SUM,NO,FALSE,OPEN,0,2,3,2038-01-19 03:14:08],",
+        "PNACKMD": "False"
+      }
+    }
+  },
+  {
+    "name": "An all-zero history response means no stored records",
+    "input": {"fPort": 3, "bytes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]},
+    "expected": {"data": {"DATALOG": "", "PNACKMD": "False"}}
+  },
+  {
+    "name": "Decode single-contact flags and maximum unsigned counter and timestamp",
+    "input": {
+      "fPort": 2,
+      "bytes": [55, 255, 255, 255, 1, 2, 3, 255, 255, 255, 255]
+    },
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "WORKMOD": "CPL01",
+        "CMOD": "PART",
+        "TDC": "YES",
+        "ALARM": "TRUE",
+        "PIN_STATUS": "OPEN",
+        "TTRIG_MOD": 1,
+        "TOTAL_PULSE": 16777215,
+        "LAST_DURATION": 66051,
+        "TIME": "2106-02-07 06:28:15"
+      }
+    }
+  },
+  {
+    "name": "Decode a closed contact without alarm or periodic flags",
+    "input": {
+      "fPort": 2,
+      "bytes": [0, 0, 0, 2, 0, 0, 60, 0, 0, 0, 0]
+    },
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "WORKMOD": "CPL01",
+        "CMOD": "SUM",
+        "TDC": "NO",
+        "ALARM": "FALSE",
+        "PIN_STATUS": "CLOSE",
+        "TTRIG_MOD": 0,
+        "TOTAL_PULSE": 2,
+        "LAST_DURATION": 60,
+        "TIME": "1970-01-01 00:00:00"
+      }
+    }
+  },
+  {
+    "name": "Decode all three counters, calculate flag and independent ROC bits",
+    "input": {
+      "fPort": 6,
+      "bytes": [63, 128, 0, 0, 255, 255, 255, 1, 2, 3, 5]
+    },
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "WORKMOD": "CPL03",
+        "CMOD": "PART",
+        "TDC": "YES",
+        "CALCULATE_FLAG": 7,
+        "PA8_TOTAL_PULSE": 8388608,
+        "PA4_TOTAL_PULSE": 16777215,
+        "PB15_TOTAL_PULSE": 66051,
+        "PA8_ROC": "TRUE",
+        "PA4_ROC": "FALSE",
+        "PB15_ROC": "TRUE"
+      }
+    }
+  },
+  {
+    "name": "Decode cleared ROC flags",
+    "input": {"fPort": 6, "bytes": [8, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0]},
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "WORKMOD": "CPL03",
+        "CMOD": "SUM",
+        "TDC": "NO",
+        "CALCULATE_FLAG": 0,
+        "PA8_TOTAL_PULSE": 0,
+        "PA4_TOTAL_PULSE": 1,
+        "PB15_TOTAL_PULSE": 2,
+        "PA8_ROC": "FALSE",
+        "PA4_ROC": "FALSE",
+        "PB15_ROC": "FALSE"
+      }
+    }
+  },
+  {
+    "name": "A legacy ten-byte pulse frame does not invent ROC flags",
+    "input": {"fPort": 6, "bytes": [8, 0, 0, 5, 0, 0, 6, 255, 255, 255]},
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "WORKMOD": "CPL03",
+        "CMOD": "SUM",
+        "TDC": "NO",
+        "CALCULATE_FLAG": 0,
+        "PA8_TOTAL_PULSE": 5,
+        "PA4_TOTAL_PULSE": 6,
+        "PB15_TOTAL_PULSE": 16777215
+      }
+    }
+  },
+  {
+    "name": "Decode contact levels independently from interrupt flags",
+    "input": {"fPort": 7, "bytes": [25]},
+    "expected": {
+      "data": {
+        "EXTI_PA8_Trigger": "FALSE",
+        "EXTI_PA8_Status": "CLOSE",
+        "EXTI_PA4_Trigger": "TRUE",
+        "EXTI_PA4_Status": "OPEN",
+        "EXTI_PB15_Trigger": "FALSE",
+        "EXTI_PB15_Status": "CLOSE",
+        "Node_type": "CPL03-LB"
+      }
+    }
+  },
+  {
+    "name": "Ignore the reserved bytes in an eleven-byte interrupt frame",
+    "input": {"fPort": 7, "bytes": [38, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255]},
+    "expected": {
+      "data": {
+        "EXTI_PA8_Trigger": "TRUE",
+        "EXTI_PA8_Status": "OPEN",
+        "EXTI_PA4_Trigger": "FALSE",
+        "EXTI_PA4_Status": "CLOSE",
+        "EXTI_PB15_Trigger": "TRUE",
+        "EXTI_PB15_Status": "OPEN",
+        "Node_type": "CPL03-LB"
+      }
+    }
+  },
+  {
+    "name": "Decode configuration widths, units and trigger modes",
+    "input": {"fPort": 4, "bytes": [0, 28, 32, 1, 0, 1, 44, 1, 0, 1, 5]},
+    "expected": {
+      "data": {
+        "Node_type": "CPL03-LB",
+        "TDC": 7200,
+        "DISALARM": 1,
+        "KEEP_STATUS": 0,
+        "KEEP_TIME": 300,
+        "TTRIG_MOD1": 1,
+        "TTRIG_MOD2": 0,
+        "TTRIG_MOD3": 1,
+        "ALARM_TDC": 5
+      }
+    }
+  },
+  {
+    "name": "Decode EU868 device status and no sub-band",
+    "input": {"fPort": 5, "bytes": [32, 1, 17, 1, 255, 11, 69]},
+    "expected": {
+      "data": {
+        "SENSOR_MODEL": "CPL03-LB",
+        "FIRMWARE_VERSION": "1.1.1",
+        "FREQUENCY_BAND": "EU868",
+        "SUB_BAND": "NULL",
+        "BAT": 2.885
+      }
+    }
+  },
+  {
+    "name": "Decode US915 device status with a numeric sub-band",
+    "input": {"fPort": 5, "bytes": [32, 1, 17, 2, 3, 14, 16]},
+    "expected": {
+      "data": {
+        "SENSOR_MODEL": "CPL03-LB",
+        "FIRMWARE_VERSION": "1.1.1",
+        "FREQUENCY_BAND": "US915",
+        "SUB_BAND": 3,
+        "BAT": 3.6
+      }
+    }
+  },
+  {
+    "name": "Reject a status frame for a different sensor",
+    "input": {"fPort": 5, "bytes": [33, 1, 17, 1, 255, 11, 69]},
+    "expected": {"errors": ["Unexpected sensor model: 33"]}
+  },
+  {
+    "name": "Report an unknown frequency band explicitly",
+    "input": {"fPort": 5, "bytes": [32, 1, 17, 15, 255, 11, 69]},
+    "expected": {"errors": ["Unknown frequency band: 15"]}
+  },
+  {
+    "name": "Reject empty history instead of returning stale records",
+    "input": {"fPort": 3, "bytes": []},
+    "expected": {"errors": ["Invalid payload length for fPort 3: 0"]}
+  },
+  {
+    "name": "Reject a partial record after a complete history record",
+    "input": {"fPort": 3, "bytes": [1, 0, 0, 2, 0, 0, 3, 128, 0, 0, 0, 1]},
+    "expected": {"errors": ["Invalid payload length for fPort 3: 12"]}
+  },
+  {
+    "name": "Reject an empty measurement instead of reporting zero counts",
+    "input": {"fPort": 2, "bytes": []},
+    "expected": {"errors": ["Invalid payload length for fPort 2: 0"]}
+  },
+  {
+    "name": "Reject a truncated single-contact timestamp",
+    "input": {"fPort": 2, "bytes": [0, 0, 0, 2, 0, 0, 60, 0, 0, 0]},
+    "expected": {"errors": ["Invalid payload length for fPort 2: 10"]}
+  },
+  {
+    "name": "Reject an oversized single-contact frame",
+    "input": {"fPort": 2, "bytes": [0, 0, 0, 2, 0, 0, 60, 0, 0, 0, 0, 0]},
+    "expected": {"errors": ["Invalid payload length for fPort 2: 12"]}
+  },
+  {
+    "name": "Reject a truncated pulse counter",
+    "input": {"fPort": 6, "bytes": [8, 0, 0, 5, 0, 0, 6, 0, 0]},
+    "expected": {"errors": ["Invalid payload length for fPort 6: 9"]}
+  },
+  {
+    "name": "Reject extra pulse payload bytes",
+    "input": {"fPort": 6, "bytes": [8, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0]},
+    "expected": {"errors": ["Invalid payload length for fPort 6: 12"]}
+  },
+  {
+    "name": "Reject a configuration missing its alarm interval",
+    "input": {"fPort": 4, "bytes": [0, 28, 32, 1, 0, 1, 44, 1, 0, 1]},
+    "expected": {"errors": ["Invalid payload length for fPort 4: 10"]}
+  },
+  {
+    "name": "Reject status with a truncated battery voltage",
+    "input": {"fPort": 5, "bytes": [32, 1, 17, 1, 255, 11]},
+    "expected": {"errors": ["Invalid payload length for fPort 5: 6"]}
+  },
+  {
+    "name": "Reject empty interrupt status",
+    "input": {"fPort": 7, "bytes": []},
+    "expected": {"errors": ["Invalid payload length for fPort 7: 0"]}
+  },
+  {
+    "name": "Do not interpret a newer firmware's unsupported port as a contact",
+    "input": {"fPort": 8, "bytes": [0, 0, 0, 2, 0, 0, 60, 0, 0, 0, 0]},
+    "expected": {"errors": ["Unsupported fPort: 8"]}
+  },
+  {
+    "name": "Reject a pulse-mode flag on the single-contact port",
+    "input": {"fPort": 2, "bytes": [8, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0]},
+    "expected": {"errors": ["Unexpected work mode for fPort 2"]}
+  },
+  {
+    "name": "Reject a single-contact flag on the pulse port",
+    "input": {"fPort": 6, "bytes": [0, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0]},
+    "expected": {"errors": ["Unexpected work mode for fPort 6"]}
+  }
+]

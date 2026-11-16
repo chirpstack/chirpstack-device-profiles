@@ -1,0 +1,18 @@
+[device]
+id = "621f921e-4685-4421-b8a0-b4cc6b5d77b8"
+name = "CPL03-LB"
+description = "Three-channel pulse and dry-contact sensor."
+
+[[device.firmware]]
+version = "1.1.1"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "cpl03-lb.js"
+
+[device.metadata]
+product_url = "https://www.dragino.com/products/lorawan-nb-iot-door-sensor-water-leak/item/278-cpl03-lb-ls.html"
+documentation_url = "https://docs.dragino.com/docs/LoRaWAN-End-Node/door-water-leak-contact-sensors/cpl03-lb/"
