@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Test decode periodic uplink",
+    "input": { "bytes": [1, 117, 96, 4, 103, 200, 0, 3, 103, 218, 0, 11, 144, 0, 0, 9, 144, 0, 0] },
+    "expected": { "data": { "battery": 96, "target_temperature": 20, "temperature": 21.8, "motor_position": 0, "motor_stroke": 0 } }
+  },
+  {
+    "name": "Test decode installation and calibration events",
+    "input": { "bytes": [6, 0, 1, 8, 229, 3, 9, 144, 91, 2] },
+    "expected": { "data": { "tamper_status": "uninstalled", "motor_calibration_result": "calibration cleared", "motor_stroke": 603 } }
+  },
+  {
+    "name": "Test decode versions",
+    "input": { "bytes": [255, 10, 1, 48, 255, 9, 1, 11] },
+    "expected": { "data": { "firmware_version": "v1.30", "hardware_version": "v1.0" } }
+  }
+]
