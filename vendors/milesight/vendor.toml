@@ -18,6 +18,7 @@ devices = [
     "milesight-em400-tld.toml",
     "milesight-em500-pt100.toml",
     "milesight-ws303.toml",
+    "milesight-wt101.toml",
 ]
 
 [vendor.metadata]
