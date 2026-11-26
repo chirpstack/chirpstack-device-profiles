@@ -1,0 +1,18 @@
+[device]
+id = "b4f09096-5470-4cc2-a29b-57d52cb981dd"
+name = "DDS45-LB"
+description = "Distance Detection Sensor"
+
+[[device.firmware]]
+version = "1.1.0"
+profiles = [
+    "AS923-1_0_3.toml",
+    "AU915-1_0_3.toml",
+    "EU868-1_0_3.toml",
+    "US915-1_0_3.toml",
+]
+codec = "dds45-lb.js"
+
+[device.metadata]
+product_url = "https://dragino.com/products/distance-level-sensor/item/272-dds45-lb-ls.html"
+documentation_url = "https://wiki.dragino.com/docs/LoRaWAN-End-Node/distance-level-detection/dds45-lb/"

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Real device uplink (fPort 2, 1310 mm)",
+    "input": {
+      "fPort": 2,
+      "bytes": [12, 252, 5, 30, 0, 12, 204, 1]
+    },
+    "expected": {
+      "data": {
+        "Node_type": "DDS45-LB",
+        "Bat": 3.324,
+        "Distance": 1310,
+        "Interrupt_flag": 0,
+        "TempC_DS18B20": "327.60",
+        "Sensor_flag": 1
+      }
+    }
+  },
+  {
+    "name": "Real device uplink (fPort 2, 1311 mm)",
+    "input": {
+      "fPort": 2,
+      "bytes": [12, 252, 5, 31, 0, 12, 204, 1]
+    },
+    "expected": {
+      "data": {
+        "Node_type": "DDS45-LB",
+        "Bat": 3.324,
+        "Distance": 1311,
+        "Interrupt_flag": 0,
+        "TempC_DS18B20": "327.60",
+        "Sensor_flag": 1
+      }
+    }
+  },
+  {
+    "name": "Real device status (fPort 5, firmware 1.1.0)",
+    "input": {
+      "fPort": 5,
+      "bytes": [40, 1, 16, 1, 0, 12, 252]
+    },
+    "expected": {
+      "data": {
+        "SENSOR_MODEL": "DDS45-LB",
+        "FIRMWARE_VERSION": "1.1.0",
+        "FREQUENCY_BAND": "EU868",
+        "SUB_BAND": 0,
+        "BAT": 3.324
+      }
+    }
+  },
+  {
+    "name": "Unsupported fPort",
+    "input": {
+      "fPort": 1,
+      "bytes": [1, 2, 3]
+    },
+    "expected": {
+      "errors": ["Unsupported fPort: 1"]
+    }
+  }
+]
